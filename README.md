@@ -3,7 +3,7 @@
 Web stranica sa novostima, recenzijama i specifikacijama mobilnih telefona
 
 ###I - Šta je urađeno? 
-a - Napravljene skice za sve podstranice u Paintu. </br></br>
+a - <b>Napravljene skice za sve podstranice u Paintu.</b> </br></br>
 b - Sve stranice su responzivne i imaju grid-view izgled. </br></br>
 c - Napravljeno da postoji izgled za mobilne uređaje. Jedinu razliku na svim stranicama pravi to što se ono što se nalazilo na desnoj strani, nalazi ispod i forme za login i registraciju imaju veću širinu u procentima na mobilnim uređajima. Napravila sam jednu skicu za to jer je na svim stranicama ista promjena.</br>
 *Naštimala sam sve što se tiče mobilnih uređaja, mislim da ništa više neće praviti problem!</br></br>
