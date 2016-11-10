@@ -23,7 +23,7 @@ Bio je problem oko prikaza na mobilnom uređaju jer je footer pravio problem, al
 -</br>
 
 ###V -<b> Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi <b>
-####<b>Mockups<b>:  </br></br>
+####<b>Mockups</b>:  </br></br>
 <b>Home.png</b> - skica naslovne stranice </br></br>
 <b>Phones.png</b> - skica podstranice na kojoj se bira brend telefona </br></br>
 <b>News.png</b> - skica podstranice News </br></br>
