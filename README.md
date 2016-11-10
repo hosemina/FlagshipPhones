@@ -5,7 +5,8 @@ Web stranica sa novostima, recenzijama i specifikacijama mobilnih telefona
 ###I - Šta je urađeno? 
 a - Napravljene skice za sve podstranice u Paintu. </br></br>
 b - Sve stranice su responzivne i imaju grid-view izgled. </br></br>
-c - Napravljeno da postoji izgled za mobilne uređaje. Jedinu razliku na svim stranicama pravi to što se ono što se nalazilo na desnoj strani, nalazi ispod i forme za login i registraciju imaju veću širinu u postotcima na mobilnim uređajima. Napravila sam jednu skicu za to jer je na svim stranicama ista promjena.</br></br>
+c - Napravljeno da postoji izgled za mobilne uređaje. Jedinu razliku na svim stranicama pravi to što se ono što se nalazilo na desnoj strani, nalazi ispod i forme za login i registraciju imaju veću širinu u postotcima na mobilnim uređajima. Napravila sam jednu skicu za to jer je na svim stranicama ista promjena.</br>
+*Naštimala sam sve što se tiče mobilnih uređaja, mislim da ništa više neće praviti problem!</br></br>
 d - Napravljene tri forme: forma za login, forma za registraciju i search forma. Moram dodati još formu za recenziju telefona.</br>
 e - Napravljen meni web stranice koji je vidljiv na svim podstranicama. </br></br>
 f- Izgled stranice je konzistentan, bez glitcheva, elementi na stranici su poravnati.</br></br>
@@ -16,7 +17,7 @@ f- Izgled stranice je konzistentan, bez glitcheva, elementi na stranici su porav
 Sve traženo je urađeno. Nisu urađene podstranice za sve brendove telefona - uradila sam samo jednu kao primjer kako bi to izgledalo. Također, urađena samo jedna podstranica za specifikacije telefona. </br>
 
 ###III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)
-- </br>
+Bio je problem oko prikaza na mobilnom uređaju jer je footer pravio problem, ali to je ispravljeno na vježbama.</br></br>
  
 ###IV -  Bug-ovi koje ste primijetili ali ne znate rješenje 
 -</br>

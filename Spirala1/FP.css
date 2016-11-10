@@ -104,7 +104,7 @@ header {
 	line-height:15px;
 	font-family: sans-serif;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 90%;
     font-weight: bold;
 	border-left: none;
 }
@@ -410,11 +410,11 @@ article {
 }
 .topvijest .naslovtopvijest span {
    color: white; 
-   font: bold 15px/30px Helvetica, Sans-Serif; 
+   font: bold 100%/100% Helvetica, Sans-Serif; 
    letter-spacing: -1px;  
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
-   padding: 10px;
+   padding: 3px;
 }
 .vijest {
 	width: 100%;
@@ -431,11 +431,11 @@ article {
 }
 .vijest .vijestnaslov span {
    color: white; 
-   font: bold 17px/30px Helvetica, Sans-Serif; 
+   font: bold 100% Helvetica, Sans-Serif; 
    letter-spacing: -1px;  
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
-   padding: 10px;
+   padding: 5px;
 }
 .vijest .vijestsadrzaj{
 	text-align: left;
@@ -474,8 +474,7 @@ article {
     text-align: center;
     text-decoration: none;
 	font-family: sans-serif;
-	text-transform: uppercase;
-	font-size: 15px;
+	font-size: 100%;
 	border-left: none;
 	padding:30px;
 	background-color:  #ebf5fa;
@@ -743,6 +742,10 @@ footer {
 		width: 100%;
 		margin: 0;
 	}
+	#logo{
+		width: 20%;
+		float: left;
+	}
 	.container2 {
 		width: 100%;
 		float: left;
@@ -753,9 +756,7 @@ footer {
 	.kolonaspecs .tekst-kolonaspecs {
 		font-size: 30%;
 	}
-	.menu {
-		font-size: 7px;
-	}
+	
 	.menu ul {
 		width: 100%;
 	}
