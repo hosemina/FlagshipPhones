@@ -15,7 +15,6 @@ body {
 .container2 {
 	width: 100%;
 	margin: auto;
-	min-width: 800px;
 	max-width: 1000px;
 	
 }
@@ -23,7 +22,7 @@ header {
 	margin-top: 10px;
 	width: 100%;
 	margin: auto;
-	min-width: 800px;
+	
 	max-width: 1000px;
 	background-color: #000;
 	
@@ -136,6 +135,7 @@ header {
 	margin-top: 30px;
 	text-align: right;
 	padding-right: 10px;
+	font-size: 15px;
 }
 
 .linija {
@@ -570,7 +570,7 @@ img {
 	font-family: sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 80%;
 	border-left: none;
 	padding:5px;
 	
@@ -602,7 +602,7 @@ img {
     color: #297aa3;
     text-align: left;
 	font-family: sans-serif;
-	font-size: 15px;
+	font-size: 70%;
 	padding:5px;
 	background-color: #f2f2f2;
 }
@@ -675,7 +675,7 @@ footer {
 .footer1{
 	width: 100%;
 	margin: auto;
-	min-width: 800px;
+	/*min-width: 800px;*/
 	max-width: 1000px;
 }
 .footer1 table {
@@ -730,7 +730,6 @@ footer {
 	article {
 		width: 100%;
 		float: left;
-		padding: 10px;
 	}
 	article .vijest #vijestnaslov {
 		width: 90%;
@@ -738,21 +737,44 @@ footer {
 	.desno {
 		width: 100%;
 		float: left;
-		padding: 10px;
 	}
 	
 	header {
 		width: 100%;
-		max-width: 800px;
-		min-width: 200px;
 		margin: 0;
 	}
 	.container2 {
-		max-width: 800px;
-		min-width: 200px;
 		width: 100%;
+		float: left;
 	}
 	.modal-content {
 		width: 80%;
+	}
+	.kolonaspecs .tekst-kolonaspecs {
+		font-size: 30%;
+	}
+	.menu {
+		font-size: 7px;
+	}
+	.menu ul {
+		width: 100%;
+	}
+	.menu ul li a{
+		padding: 14px 0px;
+	}
+	
+	.login {
+		font-size: 10px;
+		margin-top: 35px;
+	}
+	.slikaspecs{
+		width: 50%;
+	}
+	.redspecs {
+		width: 100%;
+	}
+	.kolonaspecs{
+		float: left;
+		width: 25%;
 	}
 }
