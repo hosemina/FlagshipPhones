@@ -80,6 +80,8 @@ Sve traženo je urađeno. </br>
 <b>find.png</b> - ikonica koja se nalazi u search formi </br>
 <b>galaxys7.png, s7edge.jpg, samsung-galaxy-s7--.jpg</b> - slike Samsung Galaxy S7 Edge  </br>
 <b>slika1.jpg, slika2.jpg, slika3.jpg, slika4.jpg, slika5.jpg</b> - slike koje se koriste na naslovoj stranici  </br>
-<b>slika7.jpg</b> - slika telefona koja se koristi na podstranici specifikacija Samsung Galaxy S7 Edge telefona</br></br>
+<b>slika7.jpg</b> - slika telefona koja se koristi na podstranici specifikacija Samsung Galaxy S7 Edge telefona</br>
+<b>s7edgeping.jpg, s7edgeblack.jpg, s7edgesilver.jpg, s7edgewhite.jpg, s7edgestr.jpg</b> - slike koje se koriste u galeriji</br>
+
 
 
