@@ -13,40 +13,39 @@ f- Izgled stranice je konzistentan, bez glitcheva, elementi na stranici su porav
 </br>
 *Urađena validacija svih .html i .css fajlova - nema grešaka</br>
 
-###II - <b>Šta nije urađeno? </b>
+####II - <b>Šta nije urađeno? </b>
 Sve traženo je urađeno. Nisu urađene podstranice za sve brendove telefona - uradila sam samo jednu kao primjer kako bi to izgledalo. Također, urađena samo jedna podstranica za specifikacije telefona. </br>
 
-###III - <b>Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)</b>
-Bio je problem oko prikaza na mobilnom uređaju jer je footer pravio problem, ali to je ispravljeno na vježbama.</br></br>
+####III - <b>Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)</b>
+Bio je problem oko prikaza na mobilnom uređaju jer je footer pravio problem, ali to je ispravljeno na vježbama.</br>
  
-###IV -  <b>Bug-ovi koje ste primijetili ali ne znate rješenje </b>
+####IV -  <b>Bug-ovi koje ste primijetili ali ne znate rješenje </b>
 -</br>
 
-###V -<b> Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi </b>
-####<b>Mockups</b>:  </br></br>
-<b>Home.png</b> - skica naslovne stranice </br></br>
-<b>Phones.png</b> - skica podstranice na kojoj se bira brend telefona </br></br>
-<b>News.png</b> - skica podstranice News </br></br>
-<b>Reviews.png</b> - skica podstranice Reviews </br></br>
-<b>Compare.png</b> - skica podstranice Compare </br></br>
-<b>Forme1i2.png</b> - skica login/registration forme </br></br>
-<b>Specifikacije.png</b> - skica podstranice na kojoj vidimo specifikacije odabranog telefona </br></br>
-<b>mobileversion.png</b> - skica prikaza stranice na mobilnom uređaju </br></br>
- </br></br>
-<b>FP.css</b> - css kod za sve podstranice </br></br>
-<b>FP.html</b> - html kod za HOME, tj. naslovnu stranicu </br></br>
-<b>FPCompare.html</b> - html kod za Compare podstranicu </br></br>
-<b>FPNews.html</b> - html kod za News podstranicu </br></br>
-<b>FPPhones.html</b> - html kod za Phones podstranicu </br></br>
-<b>FPReviews.html</b> - html kod za Reviews podstranicu </br></br>
-<b>FPSamsung.html</b> - html kod za podstranicu koja sadrži sve uređaje brenda Samsung </br></br>
-<b>FPSamsungGalaxyS7Edge.html - html kod za podstranicu koja sadrži specifikacije Samsung Galaxy S7 Edge mobilnog uređaja </br></br>
-<b>Untitled-1.psd i Untitled-2.psd</b> - logo stranice u PS-u </br></br>
-<b>Untitled-2.png</b> - logo stranice </br></br>
-<b>battery.png, camera.png, ram.png, size.png, date.png, memory.png, system.png</b> - ikonice koje se nalaze na podstranici FPSamsungGalaxyS7Edge.html  </br></br>
-<b>find.png</b> - ikonica koja se nalazi u search formi </br></br>
-<b>galaxys7.png, s7edge.jpg, samsung-galaxy-s7--.jpg</b> - slike Samsung Galaxy S7 Edge  </br></br>
-<b>slika1.jpg, slika2.jpg, slika3.jpg, slika4.jpg, slika5.jpg</b> - slike koje se koriste na naslovoj stranici  </br></br>
+####V -<b> Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi </b>
+####<b>Mockups</b>:  </br>
+<b>Home.png</b> - skica naslovne stranice </br>
+<b>Phones.png</b> - skica podstranice na kojoj se bira brend telefona </br>
+<b>News.png</b> - skica podstranice News </br>
+<b>Reviews.png</b> - skica podstranice Reviews </br>
+<b>Compare.png</b> - skica podstranice Compare </br>
+<b>Forme1i2.png</b> - skica login/registration forme </br>
+<b>Specifikacije.png</b> - skica podstranice na kojoj vidimo specifikacije odabranog telefona </br>
+<b>mobileversion.png</b> - skica prikaza stranice na mobilnom uređaju </br>
+<b>FP.css</b> - css kod za sve podstranice </br>
+<b>FP.html</b> - html kod za HOME, tj. naslovnu stranicu </br>
+<b>FPCompare.html</b> - html kod za Compare podstranicu </br>
+<b>FPNews.html</b> - html kod za News podstranicu </br>
+<b>FPPhones.html</b> - html kod za Phones podstranicu </br>
+<b>FPReviews.html</b> - html kod za Reviews podstranicu </br>
+<b>FPSamsung.html</b> - html kod za podstranicu koja sadrži sve uređaje brenda Samsung </br>
+<b>FPSamsungGalaxyS7Edge.html - html kod za podstranicu koja sadrži specifikacije Samsung Galaxy S7 Edge mobilnog uređaja </br>
+<b>Untitled-1.psd i Untitled-2.psd</b> - logo stranice u PS-u </br>
+<b>Untitled-2.png</b> - logo stranice </br>
+<b>battery.png, camera.png, ram.png, size.png, date.png, memory.png, system.png</b> - ikonice koje se nalaze na podstranici FPSamsungGalaxyS7Edge.html  </br>
+<b>find.png</b> - ikonica koja se nalazi u search formi </br>
+<b>galaxys7.png, s7edge.jpg, samsung-galaxy-s7--.jpg</b> - slike Samsung Galaxy S7 Edge  </br>
+<b>slika1.jpg, slika2.jpg, slika3.jpg, slika4.jpg, slika5.jpg</b> - slike koje se koriste na naslovoj stranici  </br>
 <b>slika7.jpg</b> - slika telefona koja se koristi na podstranici specifikacija Samsung Galaxy S7 Edge telefona</br></br>
 
 
