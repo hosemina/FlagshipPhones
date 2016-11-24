@@ -1,7 +1,7 @@
 #FlagshipPhones :iphone:
 ##Emina Smajlović (17039)
 Web stranica sa novostima, recenzijama i specifikacijama mobilnih telefona
-
+###Spirala 1
 ####I - <b>Šta je urađeno? </b>
 a - Napravljene skice za sve podstranice u Paintu. </br>
 b - Sve stranice su responzivne i imaju grid-view izgled. </br>
