@@ -823,7 +823,6 @@ footer {
 .dropdown-content .a:hover {
 	background-color: #cc0044;
 	cursor: pointer;
-	cursor: hand; 
 }
 
 .show {display:block;}
