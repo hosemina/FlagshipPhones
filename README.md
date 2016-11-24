@@ -39,7 +39,7 @@ Bio je problem oko prikaza na mobilnom uređaju jer je footer pravio problem, al
 <b>FPPhones.html</b> - html kod za Phones podstranicu </br>
 <b>FPReviews.html</b> - html kod za Reviews podstranicu </br>
 <b>FPSamsung.html</b> - html kod za podstranicu koja sadrži sve uređaje brenda Samsung </br>
-<b>FPSamsungGalaxyS7Edge.html - html kod za podstranicu koja sadrži specifikacije Samsung Galaxy S7 Edge mobilnog uređaja </br>
+<b>FPSamsungGalaxyS7Edge.html</b> - html kod za podstranicu koja sadrži specifikacije Samsung Galaxy S7 Edge mobilnog uređaja </br> 
 <b>Untitled-1.psd i Untitled-2.psd</b> - logo stranice u PS-u </br>
 <b>Untitled-2.png</b> - logo stranice </br>
 <b>battery.png, camera.png, ram.png, size.png, date.png, memory.png, system.png</b> - ikonice koje se nalaze na podstranici FPSamsungGalaxyS7Edge.html  </br>
