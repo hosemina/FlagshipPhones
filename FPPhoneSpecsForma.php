@@ -48,18 +48,6 @@ echo('<form enctype="multipart/form-data" method="post" action="dodajSpecifikaci
 </div>
 
 
-<div class="gallery">
-<div class="velikinaslov">Slike - click to zoom</div>
-
-<input name="image1" accept="image/jpeg" type="file">
-
-<input name="image2" accept="image/jpeg" type="file">
-<input name="image3" accept="image/jpeg" type="file">
-<input name="image4" accept="image/jpeg" type="file">
-
-
-</div>
-
 </div><input value="Submit" type="submit">
 </form>
 
