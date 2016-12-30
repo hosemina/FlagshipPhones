@@ -2,7 +2,6 @@
 
 
 if(isset($_POST['naslovvijesti'],$_FILES['imagespecs'], $_POST['vijesttext'])) {
-    echo("OKEJSVE");
         $sve = file_get_contents('xmls/News.xml');
         if($sve[strlen($sve)-2] == '>') $sve = substr($sve,0,strlen($sve)-1);
        
@@ -51,8 +50,7 @@ if(isset($_POST['naslovvijesti'],$_FILES['imagespecs'], $_POST['vijesttext'])) {
         }
     
         // Allow certain file formats
-        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-        && $imageFileType != "gif" ) {
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
             echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
             $uploadOk = 0;
         }
