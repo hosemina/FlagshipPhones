@@ -83,5 +83,71 @@ slika1.jpg, slika2.jpg, slika3.jpg, slika4.jpg, slika5.jpg - slike koje se koris
 slika7.jpg - slika telefona koja se koristi na podstranici specifikacija Samsung Galaxy S7 Edge telefona</br>
 s7edgeping.jpg, s7edgeblack.jpg, s7edgesilver.jpg, s7edgewhite.jpg, s7edgestr.jpg - slike koje se koriste u galeriji</br>
 
+##Spirala 3
+####I - <b>Šta je urađeno? </b>
+1. Napravljena serijalizacija svih podataka u XML fajlove - sve novosti, recenzije, specifikacije su serijalizovane. Obični korisnik nema nikakvih mogućnosti nad podacima, dok admin korisnik ima mogućnost brisanja, dodavanja i mijenjanja svih novosti, recenzija i specifikacija. </br> Adminovi podaci su: username: admin, password: password. </br>
+Uglavnom urađeno je sve što je traženo, nadam se da nisam šta propustila.
+</br>
+2. Adminu omogućen download svih novosti u obliku .csv fajla. (kada iz menija otvorite News, na dnu se nalazi csv ikonica na koju kada kliknete podaci se downloaduju) </br>
+3. Omogućen download specifikacija telefona u obliku .pdf fajla. Kada otvorite specifikacije bilo kojeg telefona, na dnu se nalazi ikonica pdf na koju kada kliknete podaci se downloaduju. Pdf fajl može skinuti i korisnik i admin. </br>
+4. Napravljena pretraga telefona po poljima naziv i sistem. Ukoliko se klikne na dugme 'Prikazi sve rezultate pretrage', prikažu se svi rezultati ispod.
+5. Napravljen deployment stranice na OpenShift. Link stranice: </br>
+http://flagship-phones-flagship-phones.44fs.preview.openshiftapps.com/
+</br>
+</br>
+
+####II - <b>Šta nije urađeno? </b>
+Mislim da je sve urađeno </br>
+
+####III - <b>Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)</b>
+/
+</br>
+ 
+####IV -  <b>Bug-ovi koje ste primijetili ali ne znate rješenje </b>
+Primijetila sam da ukoliko dodam neku veliku sliku u novosti, dodavanje slike bude neuspješno iako prođe sve testove(veličina, format i slično).
+-</br>
+
+####V -<b> Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi </b>
+Mockups - skice stranice </br>
+csvs - generisani .csv fajlovi </br>
+uploads - slike koje se upload-uju putem formi </br>
+xmls - xml fajlovi </br>
+</br>
+FP.css - css
+FPBrands.php - Prikazuje telefone određenog brenda </br>
+FPCompare.php - php stranica gdje se vrši compare </br>
+FPNew.php - Prikazuje novost </br>
+FPNews.php - Prikazuje novosti </br>
+FPNewsForma.php - Podstranica sa formom za dodavanje novosti </br>
+FPNewsFormaIzmijeni.php - Podstranica sa formom za mijenjanje određene novosti </br>
+FPPhoneSpecs.php - Specifikacije određenog telefona </br>
+FPPhoneSpecsForma.php - Podstranica sa formom za dodavanje specifikacija </br>
+FPPhoneSpecsFormaIzmijeni.php - Podstranica sa formom za mijenjanje specifikacija </br>
+FPPhones.php - Prikazuje marke telefona --> Phones > Više marki.. </br>
+FPReview.php - Prikazuje recenziju </br>
+FPReviews.php - Prikazuje recenzije </br>
+FPReviewsForma.php - Podstranica sa formom za dodavanje recenzije </br>
+FPReviewsFormaIzmijeni.php - Podstranica sa formom za mijenjanje određene recenzije </br>
+FPSpecsForma.php - ne koristi se, zaboravila sam izbrisati </br>
+desno.php - php kod za prikazivanje svih brendova telefona desno </br>
+dodajNovost.php - php za dodavanje novosti </br>
+dodajRecenziju.php - php za dodavanje recenzije </br>
+dodajSpecifikacije.php - php za dodavanje specifikacija </br>
+footer.php - footer </br>
+index.php - Početna stranica u php-u</br>
+izbrisiSpecifikaciju.php - brisanje specifikacije </br>
+obrisiRecenziju.php - brisanje recenzija </br>
+obrisiNovost.php - brisanje novosti </br>
+izmijeniSpecifikaciju.php - mijenjanje specifikacija </br>
+izmijeniVijest.php - mijenjanje novosti </br>
+izmijeniRecenziju.php - mijenjanje recenzije </br>
+search.php, livesearch.php, livesearchcompare1, livesearchcompare2.php- pretraga </br>
+login.php, logout.php, registration.php - php za login/logout/registraciju </br>
+skiniCsv.php, skiniPdf.php - skidanje .csv i .pdf fajlova </br>
+OSTALO - slike </br>
+
+
+
+
 
 
