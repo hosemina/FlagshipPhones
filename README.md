@@ -95,6 +95,7 @@ Uglavnom urađeno je sve što je traženo, nadam se da nisam šta propustila.
 http://flagship-phones-flagship-phones.44fs.preview.openshiftapps.com/
 </br>
 </br>
+**Od marki telefona su samo dodane Samsung, Apple i Microsoft!
 
 ####II - <b>Šta nije urađeno? </b>
 Mislim da je sve urađeno </br>
