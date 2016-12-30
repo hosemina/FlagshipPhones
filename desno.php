@@ -10,7 +10,7 @@ echo("<ul id='telefoni'>");
         $allBrands = simplexml_load_file('xmls/Brands.xml');
         foreach ($allBrands as $x)
         {
-			echo("<li><a href='FPBrands?id={$x->idbrand}'>{$x->naziv}</a></li>");
+			echo("<li><a href='FPBrands.php?id={$x->idbrand}'>{$x->naziv}</a></li>");
 		}
 	}
 echo("</ul>");
