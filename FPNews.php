@@ -14,7 +14,7 @@ include 'header.php';
         echo("<div class='velikinaslov'>News</div>");
         foreach ($sveNovosti as $x)
         {
-			echo("<a href='FPNews.php?id={$x->id}'><div class='vijest'>");
+			echo("<a href='FPNew.php?id={$x->id}'><div class='vijest'>");
 			$tekst = substr($x->tekst, 0, 400);
 			$tekst = $tekst."...";
 			echo("<img src='{$x->slika}' alt='Problem sa prikazivanjem slike' class='slikareview'><div class='sadrzajvijesti'>".htmlspecialchars($tekst, ENT_QUOTES, 'UTF-8')."</div>");
