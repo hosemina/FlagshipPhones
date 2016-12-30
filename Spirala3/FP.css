@@ -1,0 +1,1025 @@
+*{
+	box-sizing: border-box;
+}
+body {
+	background-color:#fff;
+	margin: 0;
+}
+.container1 {
+	width: 100%;
+	background-color:#f2f2f2;
+	height: 122px;
+	margin: 0;
+}
+
+.container2 {
+	width: 100%;
+	margin: auto;
+	max-width: 1000px;
+}
+header {
+	margin-top: 10px;
+	width: 100%;
+	margin: auto;
+	
+	max-width: 1000px;
+	background-color: #000;
+	
+}
+#logo {
+	width: 25%;
+	height: 50px;
+	margin-top: 20px;
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 20px;
+}
+#logo img {
+	width: 100%;
+	height: 100%;
+}
+h3 {
+    text-align: justify;
+}
+.menu {
+	width: 80%;
+	float: left;
+	}
+.menu ul {
+    list-style-type: none;
+    width: 80%;
+	margin: 10px;
+    padding: 0;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul li#mhome a{
+	background-color: #3397c9;
+}
+.menu ul li#mhome a:hover{
+	background-color:  #297aa3;
+	color: silver;
+}
+
+.menu ul li#mphones a{
+	background-color:  #ff0055;
+}
+.menu ul li#mphones a:hover{
+	background-color: #cc0044;
+	color: silver;
+}
+
+.menu ul li#mnews a{
+	background-color:   #ff9900;
+}
+.menu ul li#mnews a:hover{
+	background-color: #cc7a00;
+	color: silver;
+}
+.menu ul li#searchmeni a{
+	background-color:   #ff9900;
+	width: 8%;
+	height: 43px;
+}
+#slikasearch {
+	
+	float: right;
+	max-height: 30px;
+	max-width: 80%;
+}
+.menu ul li#searchmeni a:hover{
+	background-color: #cc7a00;
+	color: silver;
+}
+
+.menu ul li#mreviews a{
+	background-color:   #4CAF50;
+}
+.menu ul li#mreviews a:hover{
+	background-color: #00cc44;
+	color: silver;
+}
+.slikareview{
+	width:50%;
+	float:left;
+}
+
+.menu ul li#mcompare a{
+	background-color:  #5500ff;
+}
+.menu ul li#mcompare a:hover{
+	background-color: #4400cc;
+	color: silver;
+}
+
+.menu ul li a {
+    display: block;
+    box-shadow: 1px 0px 1px #000 inset;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	float: left;
+	width: 17%;
+	line-height:15px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 90%;
+    font-weight: bold;
+	border-left: none;
+}
+menu ul li #a button {
+	display: block;
+    box-shadow: 1px 0px 1px #000 inset;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	float: left;
+	width: 19%;
+	line-height:15px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 90%;
+    font-weight: bold;
+	border-left: none;
+}
+#a {
+	
+	float: left;
+	width: 19%;
+}
+#dropbtn {
+	display: block;
+    box-shadow: 1px 0px 1px #000 inset;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	float: left;
+	width: 100%;
+	line-height:15px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 90%;
+    font-weight: bold;
+	border-left: none;
+}
+#searchd {
+	float: left;
+	width: 100%;
+}
+#search {
+	margin-top: 25px;
+	margin-left: 0px;
+}
+
+#search input[type="text"] {
+    background: url(find.png) no-repeat 10px 6px #fcfcfc;
+    border: 1px solid #d1d1d1;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #bebebe;
+    width: 50%;
+    padding: 6px 15px 6px 35px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    }
+
+.login {
+	width: 20%;
+	float: right;
+	margin-top: 30px;
+	text-align: right;
+	padding-right: 10px;
+	font-size: 15px;
+}
+
+.linija {
+	float: left;
+	width: 100%;
+	height: 3px;
+	background-color: silver;
+}
+
+.desno {
+	float:right;
+	width: 25%;
+	background-color:  #fff;
+}
+.desno h4 {
+	text-align: center;
+	color:  #fff;
+	padding: 0;
+}
+.naslov {
+	text-align: right;
+	color:  #000;
+	padding-right: 20px;
+	width: 100%;
+	float: left;
+	font-family: sans-serif;
+	font-size: 14px;
+	background-color: #fff;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+#phonesnaslov {
+    border-right: groove #3397c9;
+	border-right-width: 40px
+}
+#top10naslov {
+	border-right: groove #ff0055;
+	border-right-width: 40px
+}
+#top10naslov2 {
+	border-right: groove #ff9900;
+	border-right-width: 40px
+}
+ #telefoni{
+	width: 100%;
+	margin: 0;
+    padding: 5px;
+    border: 0;
+	float:left;
+	columns: 3;
+	column-gap: 1px;
+	background: rgb(242, 242, 242);
+	background: rgba(242, 242, 242, 0.5);
+}
+#telefoni li {
+	list-style-type: none;
+	list-style-position:inside;
+	
+}
+#telefoni li a{
+	display: block;
+    box-shadow: 0px 0px 0px #000000 inset;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 10px;
+	border-left: none;
+	padding:10px;
+	
+}
+#top10 li:nth-child(even) {
+	background:   rgb(255, 204, 221);
+	background: rgba(255, 204, 221, 0.5);
+}
+#telefoni li a:hover{
+	background-color: #297aa3;
+	color: #fff;
+	
+}
+ #top10{
+	width: 100%;
+	margin: 0;
+    padding-top:5px;
+	padding-left: 0;
+    border: 0;
+	float:left;
+	
+}
+#top10 li {
+	
+	list-style-position:inside;
+	background:rgb(255, 230, 238);
+	background:rgba(255, 230, 238, 0.5);
+	padding: 2px;
+}
+#top10 li a {
+	display: block;
+    box-shadow: 0px 0px 0px #000000 inset;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+	font-family: sans-serif;
+	font-size: 12px;
+	padding:3px;
+}
+#top10 li a:hover{
+	background-color: #cc0044;
+	color: #fff;
+}
+
+ #top10-2{
+	width: 100%;
+	margin: 0;
+    padding-top:5px;
+	padding-left: 0;
+    border: 0;
+	float:left;
+	
+}
+#top10-2 li {
+	
+	list-style-position:inside;
+	background:rgb(255, 235, 204);
+	background: rgba(255, 235, 204, 0.5);
+	padding: 2px;
+}
+#top10-2 li:nth-child(even) {
+	background:rgb(255, 245, 230);
+	background:rgba(255, 245, 230, 0.5);
+}
+#top10-2 li a {
+	display: block;
+    box-shadow: 0px 0px 0px #000000 inset;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+	font-family: sans-serif;
+	font-size: 12px;
+	padding:3px;
+}
+#top10-2 li a:hover{
+	background-color: #cc7a00;
+	color: #fff;
+}
+
+.container {
+	margin: 15px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+	margin-left: 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+.modalmali {
+	display : none;
+    position: absolute; 
+	
+	z-index: 1; 
+    overflow: auto; 
+    background-color: #fff;
+    background-color: #fff;
+    padding-top: 60px;
+}
+.modalmalicompare {
+	display : none;
+    position: absolute; 
+	
+	z-index: 1; 
+    overflow: auto; 
+    background-color: #fff;
+    background-color: #fff;
+    padding-top: 0px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 50%; 
+}
+.modal-content-gallery {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+	
+}
+.galleryImg {
+	width: 25%;
+	border: 1px solid #d1d1d1;
+    cursor: pointer;
+    transition: 0.3s;
+	padding: 2px;
+	float: right;
+}
+.gallery {
+	background-color: #fff;
+	width: 100%;
+	float: right;
+}
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content-gallery, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    animation: animatezoom 0.6s
+}
+
+    
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+	
+}
+article {
+	float: left;
+	width: 73%;
+	background-color: white;
+	margin-top: 20px;
+	margin-right: 5px;
+	padding-bottom: 10px;
+}
+
+.velikinaslov {
+	text-align: right;
+	color:  #000;
+	padding-right: 20px;
+	width: 100%;
+	float: left;
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #fff;
+	text-transform: uppercase;
+	border-right: groove #fff;
+	border-right-width: 40px
+}
+.velikinaslovcompare {
+	text-align: left;
+	color:  #000;
+	padding-right: 20px;
+	width: 100%;
+	float: left;
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #fff;
+	text-transform: uppercase;
+	border-left: groove #fff;
+	border-left-width: 40px
+}
+
+.topvijest {
+	height: 250px;
+	background-color: white;
+	padding: 5px;
+	width: 33%;
+	float: left;
+}
+.topvijest .naslovtopvijest {
+	position: absolute;
+	margin-top: -90px;
+	text-align: left;
+	width: 30%;
+	
+}
+.topvijest .naslovtopvijest span {
+   color: white; 
+   font: bold 100%/100% Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 3px;
+}
+.vijest {
+	width: 100%;
+	float:left;
+	background-color:#f2f2f2;
+	margin-top:5px;
+	padding: 5px;
+}
+ .vijestnaslov{
+	text-align: center;
+	width: 50%;
+}
+.sadrzajvijesti{
+	width: 48%;
+	float:left;
+	margin-left: 5px;
+	text-align: justify;
+    text-justify: inter-word;
+    margin-top: 20px;
+}
+ .vijestnaslov span {
+   color: white; 
+   font: bold 100% Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 5px;
+   width: 100%;
+}
+.vijest .vijestsadrzaj{
+	text-align: left;
+	width: 100%;
+	font-size: 16px;
+}
+.vijest .vijestsadrzaj span {
+	color: black; 
+   font: bold 16px/40px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(230, 230, 230);
+   background: rgba(230, 230, 230, 0.7);
+   padding: 10px;
+}
+
+#telefoniSvi{
+	width: 100%;
+	margin: 0;
+    padding: 5px;
+    border: 0;
+	float:left;
+	columns: 3;
+	column-gap: 1px;
+	background: rgb(242, 242, 242);
+	background: rgba(242, 242, 242, 0.5);
+}
+#telefoniSvi li {
+	list-style-type: none;
+	list-style-position:inside;
+	
+}
+#telefoniSvi li a{
+	display: block;
+    box-shadow: 0px 0px 1px #000000 inset;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+	font-family: sans-serif;
+	font-size: 100%;
+	border-left: none;
+	padding:30px;
+	background-color:  #ebf5fa;
+	
+}
+#telefoniSvi li a:hover{
+	background-color: #297aa3;
+	color: #fff;
+	
+}
+.phone {
+	width: 100%;
+}
+.phoneslika{
+}
+.phonename{
+	display: block;
+    box-shadow: 0px 0px 0px #000000 inset;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 15px;
+	border-left: none;
+	width: 100%;
+	background-color:  #ebf5fa;
+}
+#phonesGrid{
+	width: 100%;
+	margin: 0;
+    padding: 2px;
+    border: 0;
+	float:left;
+	columns: 3;
+	column-gap: 5px;
+	background: rgb(242, 242, 242);
+	background: rgba(242, 242, 242, 0.5);
+}
+#phonesGrid li {
+	list-style-type: none;
+	list-style-position:inside;
+	margin: 2px;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.specs-velikinaslov {
+	display: block;
+    box-shadow: 0px 0px 0px #000000 inset;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 20px;
+	border-left: none;
+	padding:10px;
+	background-color:  #3397c9;
+}
+.slikaspecs{
+	float:left;
+	width: 35%;
+	
+}
+.slikaspecscompare {
+	float:left;
+	width: 100%;
+	
+}
+.sveskupa {
+	float: right;
+	width: 65%;
+}
+.sveskupacompare{
+	float: left;
+	width: 100%;
+}
+.specs{
+	float:left;
+	
+}
+.redspecs {
+	float:right;
+	width: 100%;
+}
+.kolonaspecs {
+	float:right;
+	width: 25%;
+	padding-top:20px;
+	padding-bottom: 20px;
+	color: #fff;
+}
+.kolonaspecs:hover {
+	color: #000;
+}
+.kolonaspecs .malaslicica {
+	max-width: 30%;
+	padding:5px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.kolonaspecs .tekst-kolonaspecs{
+	display: block;
+    box-shadow: 0px 0px 0px #000000 inset;
+    text-align: center;
+    text-decoration: none;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 100%;
+	border-left: none;
+	padding:5px;
+	
+}
+
+.kolonaspecs .malitekst-kolonaspecs{
+	display: block;
+    box-shadow: 0px 0px 0px #000000 inset;
+    text-align: center;
+    text-decoration: none;
+	font-family: sans-serif;
+	font-size: 80%;
+	border-left: none;
+	padding:5px;
+}
+#camera{
+	background-color: #3397c9;
+}
+#display {
+	background-color: #ff0055;
+}
+#ram {
+	background-color: #ff9900;
+}
+#battery {
+	background-color: #4CAF50;
+}
+.redspecs ul li{
+    color: #297aa3;
+    text-align: left;
+	font-family: sans-serif;
+	font-size: 70%;
+	padding:5px;
+	background-color: #f2f2f2;
+}
+.redspecs ul li:hover{
+	color: #000;
+}
+.redspecs ul #releasedDate{
+	list-style-image: url('date.png');
+}
+.redspecs ul #system{
+	list-style-image: url('system.png');
+}
+.redspecs ul #memory{
+	list-style-image: url('memory.png');
+}
+.table-specs {
+	width: 100%;
+	border: 2px solid #f2f2f2;
+    border-collapse: collapse;
+}
+.table-specs tr {
+	border: 1px solid #fff;
+    border-collapse: collapse;
+}
+
+.table-specs .kolona1-specs{
+	color: #000;
+    text-align: left;
+	font-family: sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	padding:5px;
+	background-color: #e6e6e6;
+	width: 20%;
+}
+.table-specs .kolona2-specs{
+	color: #000;
+    text-align: left;
+	font-family: sans-serif;
+	font-size: 13px;
+	padding:5px;
+	background-color: #f2f2f2;
+	width: 80%;
+}
+.compare {
+	width: 50%;
+	float: left;
+}
+.compare select {
+	float: left;
+	width: 80%;
+}
+.compare h5 {
+	float: left;
+	width: 100%;
+}
+.slikacompare {
+	width: 50%;
+	float: left;
+}
+footer {
+	color: #000;
+	background-color: #f2f2f2;
+	text-align: center;
+    clear: both;
+    position: relative;
+    height: 3em;
+	margin: 0;
+}
+.footer1{
+	width: 100%;
+	margin: auto;
+	/*min-width: 800px;*/
+	max-width: 1000px;
+}
+.footer1 table {
+	width: 100%;
+	overflow: hidden;
+    border-collapse: collapse;
+}
+.footer1 table .red1 {
+	width: 60%;
+	border-right: solid 1px gray;
+	font-size: 12px;
+	
+}
+#rf1 {
+	width: 100%;
+	float: left;
+}
+#rf1 ul {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+	width: 100%;
+}
+#rfi ul li {
+	float: left;
+}
+
+#rf1 ul li a {
+	display: block;
+    color: black;
+    text-align: center;
+	padding-top: 10px;
+    text-decoration: none;
+	float: left;
+	width: 11%;
+	line-height:15px;
+	font-size: 12px;
+	border-left: none;
+}
+
+.footer table #fp{
+	text-align: center;
+}
+/*
+#linija2 {
+	background-color: gray;
+	height: 2px;
+}*/
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+	max-width: 50%;
+	min-width: 15%;
+	margin-top: 42px;
+	background-color:  #ff0055;
+	
+}
+.dropdown-content .a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+	font-family: sans-serif;
+	text-transform: capitalize;
+	font-size: 70%;
+	box-shadow: 1px 0px 1px #000 inset;
+}
+
+.dropdown-content .a:hover {
+	background-color: #cc0044;
+	cursor: pointer;
+}
+
+.show {display:block;}
+
+.greska {
+	color: red;
+	font-size: 12px;
+	margin: 10px 0;
+}
+.komentar {
+	background-color: silver;
+}
+.komentar-forma {
+	background-color: #f2f2f2;
+}
+#livesearch {
+	color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display : none;
+	font-family: sans-serif;
+	text-transform: capitalize;
+	font-size: 90%;
+	box-shadow: 1px 0px 1px #000 inset;
+	
+}
+.mogucnosti{
+	width: 100%;
+	float: right;
+	border: 2px solid #f2f2f2;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.ikoniceadmin{
+	width: 5%;
+	float: right;
+}
+
+#mjestozapretragu {
+	width:100%;
+	padding: 20px;
+	margin-top: 20px;
+	float: right;
+	background:rgb(255, 230, 238);
+	background:rgba(255, 230, 238, 0.5);
+}
+#pretraganaslov{
+	visibility: hidden;
+}
+@media only screen and (max-width: 800px) {
+	article {
+		width: 100%;
+		float: left;
+	}
+	article .vijest #vijestnaslov {
+		width: 90%;
+	}
+	.desno {
+		width: 100%;
+		float: left;
+	}
+	
+	header {
+		width: 100%;
+		margin: 0;
+	}
+	#logo{
+		width: 20%;
+		float: left;
+	}
+	.container2 {
+		width: 100%;
+		float: left;
+	}
+	.modal-content {
+		width: 80%;
+	}
+	.kolonaspecs .tekst-kolonaspecs {
+		font-size: 80%;
+	}
+	.kolonaspecs .malitekst-kolonaspecs {
+		font-size: 60%;
+	}
+	
+	.menu ul {
+		width: 100%;
+	}
+	.menu ul li a{
+		padding: 14px 0px;
+	}
+	#slikasearch {
+	
+	float: right;
+
+	max-height: 30px;
+	max-width: 50%;
+}
+	
+	.login {
+		font-size: 10px;
+		margin-top: 35px;
+	}
+	.slikaspecs{
+		width: 0;
+	}
+	.redspecs {
+		width: 100%;
+	}
+	.kolonaspecs{
+		float: left;
+		width: 25%;
+		
+	}
+	.modal-content-gallery {
+		width: 100%;
+	}
+	.dropdown {
+		margin-left: 0px;
+	}
+}
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<specs>
+
+<spec>
+<id>2</id>
+<naslov>Samsung Galaxy S7 Edge</naslov>
+<slika>uploads/slika3.jpg</slika>
+<releaseddate>Released 2016, March</releaseddate>
+<system>Android OS, v6.0</system>
+<memory>32/65GB storage, microSD card slot</memory>
+<cameraveliki>12MP</cameraveliki>
+<cameramali>2160p</cameramali>
+<displayveliki>5.5"</displayveliki>
+<displaymali>1440x2560 pixels</displaymali>
+<ramveliki>4GB RAM</ramveliki>
+<rammali>Snapdragon 820</rammali>
+<batteryveliki>3600mAh</batteryveliki>
+<batterymali>Li-Ion</batterymali>
+</spec>
+
+</specs>

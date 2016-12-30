@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<specs>
+
+<spec>
+<idbrand>1</idbrand><id>2</id>
+<naslov>Samsung Galaxy S7 Edge</naslov>
+<slika>uploads/slika3.jpg</slika>
+<releaseddate>Released 2016, March</releaseddate>
+<system>Android OS, v6.0</system>
+<memory>32/65GB storage, microSD card slot</memory>
+<cameraveliki>12MP</cameraveliki>
+<cameramali>2160p</cameramali>
+<displayveliki>5.5"</displayveliki>
+<displaymali>1440x2560 pixels</displaymali>
+<ramveliki>4GB RAM</ramveliki>
+<rammali>Snapdragon 820</rammali>
+<batteryveliki>3600mAh</batteryveliki>
+<batterymali>Li-Ion</batterymali>
+</spec>
+<spec>
+<idbrand>2</idbrand>
+<id>1</id>
+<naslov>Apple iPhone 6</naslov>
+<slika>uploads/slika8.jpg</slika>
+<releaseddate>Released 2014, September</releaseddate>
+<system>iOS 8, up to iOS 10.2</system>
+<memory>16/64/128GB storage, no card slot</memory>
+<cameraveliki>8MP</cameraveliki>
+<cameramali>1080p</cameramali>
+<displayveliki>4.7"</displayveliki>
+<displaymali>750x1334 pixels</displaymali>
+<ramveliki>1GB RAM</ramveliki>
+<rammali>Apple A8</rammali>
+<batteryveliki>1810mAh</batteryveliki>
+<batterymali>Li-Po</batterymali>
+</spec>
+<spec>
+<idbrand>3</idbrand>
+<id>1</id>
+<naslov>Microsoft Lumia 650</naslov>
+<slika>uploads/slika9.jpg</slika>
+<releaseddate>Released 2016, February</releaseddate>
+<system>Microsoft Windows 10</system>
+<memory>16GB storage, microSD card slot</memory>
+<cameraveliki>8MP</cameraveliki>
+<cameramali>720p</cameramali>
+<displayveliki>5"</displayveliki>
+<displaymali>720x1280 pixels</displaymali>
+<ramveliki>1GB RAM</ramveliki>
+<rammali>Snapdragon 212</rammali>
+<batteryveliki>2000mAh</batteryveliki>
+<batterymali>Li-Ion</batterymali>
+</spec>
+<spec>
+<idbrand>2</idbrand>
+<id>2</id>
+<naslov>Apple iPhone 7</naslov>
+<slika>uploads/slika10.png</slika>
+<releaseddate>Released 2016, September</releaseddate>
+<system>iOS 10.01, up to iOS 10.2</system>
+<memory>32/128/256GB storage, no card slot</memory>
+<cameraveliki>12MP</cameraveliki>
+<cameramali>2160p</cameramali>
+<displayveliki>4.7"</displayveliki>
+<displaymali>750x1334 pixels</displaymali>
+<ramveliki>2GB RAM</ramveliki>
+<rammali>Apple A10 Fusion</rammali>
+<batteryveliki>1960mAh</batteryveliki>
+<batterymali>Li-Ion</batterymali>
+</spec>
+<spec>
+<idbrand>3</idbrand>
+<id>2</id>
+<naslov>Microsoft Lumia 640 XL</naslov>
+<slika>uploads/slika11.jpg</slika>
+<releaseddate>Released 2015, April</releaseddate>
+<system>Microsoft Windows Phone 8.1</system>
+<memory>8GB storage, microSD card slot</memory>
+<cameraveliki>13MP</cameraveliki>
+<cameramali>1080p</cameramali>
+<displayveliki>5.7"</displayveliki>
+<displaymali>720x1280 pixels</displaymali>
+<ramveliki>1GB RAM</ramveliki>
+<rammali>Snapdragon 400</rammali>
+<batteryveliki>3000mAh</batteryveliki>
+<batterymali>Li-Ion</batterymali>
+</spec>
+</specs>
