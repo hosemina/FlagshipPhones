@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?><specs>
+<spec>
+<id>1</id>
+<naslov>Apple iPhone 6</naslov>
+<slika>uploads/slika8.jpg</slika>
+<releaseddate>Released 2014, September</releaseddate>
+<system>iOS 8, up to iOS 10.2</system>
+<memory>16/64/128GB storage, no card slot</memory>
+<cameraveliki>8MP</cameraveliki>
+<cameramali>1080p</cameramali>
+<displayveliki>4.7"</displayveliki>
+<displaymali>750x1334 pixels</displaymali>
+<ramveliki>1GB RAM</ramveliki>
+<rammali>Apple A8</rammali>
+<batteryveliki>1810mAh</batteryveliki>
+<batterymali>Li-Po</batterymali>
+</spec>
+<spec>
+<id>2</id>
+<naslov>Apple iPhone 7</naslov>
+<slika>uploads/slika10.png</slika>
+<releaseddate>Released 2016, September</releaseddate>
+<system>iOS 10.01, up to iOS 10.2</system>
+<memory>32/128/256GB storage, no card slot</memory>
+<cameraveliki>12MP</cameraveliki>
+<cameramali>2160p</cameramali>
+<displayveliki>4.7"</displayveliki>
+<displaymali>750x1334 pixels</displaymali>
+<ramveliki>2GB RAM</ramveliki>
+<rammali>Apple A10 Fusion</rammali>
+<batteryveliki>1960mAh</batteryveliki>
+<batterymali>Li-Ion</batterymali>
+</spec>
+</specs>

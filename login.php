@@ -1,46 +1,50 @@
 <?php
 
 	session_start();
-	$novosti = file_get_contents('xmls/Admin.xml');
+	/*$novosti = file_get_contents('xmls/Admin.xml');
     $users = file_get_contents('xmls/Users.xml');
     if(strlen($novosti) != 0 && strlen($users)!=0)
     {
 	 $xmlpodaci = simplexml_load_file('xmls/Admin.xml');
-     $xmlpodaciusers = simplexml_load_file('xmls/Users.xml');
+     $xmlpodaciusers = simplexml_load_file('xmls/Users.xml');*/
 	 if(!isset($_POST["uname"]) || !isset($_POST["psw"]))
     {
         echo("<script>alert('Polja nisu unesena.')</script>");
         header('Location: index.php');
         session_destroy();
     }
-    $stavioadmin = 0;
-    if($_POST["uname"] == $xmlpodaci->username && md5($_POST["psw"]) == $xmlpodaci->password)
-    {
-        $_SESSION["admin"] = $_POST["uname"];
-        $stavioadmin = 1;
-        header("Location: index.php");   
-        
-    }
-    if($stavioadmin == 0) {
-        $nasao = 0;
-        foreach($xmlpodaciusers->user as $user)
-            {
-            if($_POST["uname"] == $user->username && md5($_POST["psw"]) == $user->password)
-            {
-                $_SESSION["user"] = $_POST["uname"];
-                $nasao = 1; 
-                header("Location: index.php");  
-                break;
-                echo("<script>alert('Password i username se ne podudaraju.')</script>");
-            }
-            }
-            if($nasao == 0 ) {
-                    session_destroy();
-                    echo("<script>alert('Password i username se ne podudaraju.')</script>");
-                    header('Location: index.php');
-                }
+        $veza = mysqli_connect("localhost", "emina", "emina123", "flagshipphones");
+        if (!$veza) {
+            die("Connection failed: " . mysqli_connect_error());
         }
-}
+        $users = $veza->query("select id,type, username, password from users where username='".$_POST["uname"]."'");
+        
+        if($users->num_rows >= 1) {
+            foreach ($users as $u) {
+                $user = $u;
+            }
+            $passwords = $veza->query("select password from passwords where id=".$user["id"]);
+            foreach ($passwords as $adminadmin) {
+                $password = $adminadmin;
+            }
+            
+            if(md5($_POST["psw"]) == $password["password"] && $user["type"] == 1)
+            {
+                $_SESSION["admin"] = $_POST["uname"];
+                $stavioadmin = 1;
+                header("Location: index.php");   
+            }
+            else if (md5($_POST["psw"]) == $password["password"] && $user["type"] == 2){
+                $_SESSION["user"] = $_POST["uname"];
+                header("Location: index.php");  
+            }
+        }
+        else {
+            session_destroy();
+            echo("<script>alert('Password i username se ne podudaraju.')</script>");
+            header('Location: admin.php');
+        }
+
     
 
 ?>

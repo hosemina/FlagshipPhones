@@ -1,9 +1,15 @@
 
 <?php
+$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+$veza->exec("set names utf8");
+if (!$veza) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
     $idbrand=$_GET["idbrand"];
 
 if(isset($_POST['naslovtekst'],$_FILES['imagespecs'], $_POST['releaseddatetext'],$_POST['systemtext'],$_POST['memorytext'],$_POST['cameravelikitekst'],$_POST['cameramalitekst'],$_POST['displayvelikitekst'],$_POST['displaymalitekst'],$_POST['ramvelikitekst'],$_POST['rammalitekst'],$_POST['batteryvelikitekst'],$_POST['batterymalitekst'])) {
-    echo("OKEJSVE");
+    /*echo("OKEJSVE");
         $sve = file_get_contents('xmls/PhoneSpecs'.$idbrand.'.xml');
         $sveukupno = file_get_contents('xmls/PhoneSpecs.xml');
         if($sve[strlen($sve)-2] == '>') $sve = substr($sve,0,strlen($sve)-1);
@@ -19,12 +25,17 @@ if(isset($_POST['naslovtekst'],$_FILES['imagespecs'], $_POST['releaseddatetext']
         {
             $brojSpecifikacija = $x->id+1;
         }
-        echo($brojSpecifikacija);
-    
+        echo($brojSpecifikacija);*/
+        $sve = $veza->query("select id from phones order by id desc limit 1");
+         foreach($sve as $nesto)
+         {
+                $brojSpecifikacija = $nesto["id"];
+         }
         /*img upload*/
     
         $target_dir = "uploads/";
-        $target_file = $target_dir . basename($_FILES["imagespecs"]["name"]);
+        $ime_slike = "slikaspecs".$brojSpecifikacija.".jpg";
+        $target_file = $target_dir . $ime_slike;
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
         // Check if image file is a actual image or fake image
@@ -73,13 +84,19 @@ if(isset($_POST['naslovtekst'],$_FILES['imagespecs'], $_POST['releaseddatetext']
             }
         }
     
-        $specs = "<spec><id>".$brojSpecifikacija."</id><naslov>" .htmlspecialchars($_POST['naslovtekst']) . "</naslov><slika>".$target_file."</slika><releaseddate>" . htmlspecialchars($_POST['releaseddatetext']) . "</releaseddate><system>".htmlspecialchars($_POST['systemtext'])."</system><memory>".htmlspecialchars($_POST['memorytext'])."</memory><cameraveliki>".htmlspecialchars($_POST['cameravelikitekst'])."</cameraveliki><cameramali>".htmlspecialchars($_POST['cameramalitekst'])."</cameramali><displayveliki>".htmlspecialchars($_POST['displayvelikitekst'])."</displayveliki><displaymali>".htmlspecialchars($_POST['displaymalitekst'])."</displaymali><ramveliki>".htmlspecialchars($_POST['ramvelikitekst'])."</ramveliki><rammali>".htmlspecialchars($_POST['rammalitekst'])."</rammali><batteryveliki>".htmlspecialchars($_POST['batteryvelikitekst'])."</batteryveliki><batterymali>".htmlspecialchars($_POST['batterymalitekst'])."</batterymali></spec>";
+        /*$specs = "<spec><id>".$brojSpecifikacija."</id><naslov>" .htmlspecialchars($_POST['naslovtekst']) . "</naslov><slika>".$target_file."</slika><releaseddate>" . htmlspecialchars($_POST['releaseddatetext']) . "</releaseddate><system>".htmlspecialchars($_POST['systemtext'])."</system><memory>".htmlspecialchars($_POST['memorytext'])."</memory><cameraveliki>".htmlspecialchars($_POST['cameravelikitekst'])."</cameraveliki><cameramali>".htmlspecialchars($_POST['cameramalitekst'])."</cameramali><displayveliki>".htmlspecialchars($_POST['displayvelikitekst'])."</displayveliki><displaymali>".htmlspecialchars($_POST['displaymalitekst'])."</displaymali><ramveliki>".htmlspecialchars($_POST['ramvelikitekst'])."</ramveliki><rammali>".htmlspecialchars($_POST['rammalitekst'])."</rammali><batteryveliki>".htmlspecialchars($_POST['batteryvelikitekst'])."</batteryveliki><batterymali>".htmlspecialchars($_POST['batterymalitekst'])."</batterymali></spec>";
         $sve = substr($sve,0,strlen($sve)-8).$specs."</specs>";
         $specsukupno = "<spec><idbrand>".$idbrand."</idbrand><id>".$brojSpecifikacija."</id><naslov>" .htmlspecialchars($_POST['naslovtekst']) . "</naslov><slika>".$target_file."</slika><releaseddate>" . htmlspecialchars($_POST['releaseddatetext']) . "</releaseddate><system>".htmlspecialchars($_POST['systemtext'])."</system><memory>".htmlspecialchars($_POST['memorytext'])."</memory><cameraveliki>".htmlspecialchars($_POST['cameravelikitekst'])."</cameraveliki><cameramali>".htmlspecialchars($_POST['cameramalitekst'])."</cameramali><displayveliki>".htmlspecialchars($_POST['displayvelikitekst'])."</displayveliki><displaymali>".htmlspecialchars($_POST['displaymalitekst'])."</displaymali><ramveliki>".htmlspecialchars($_POST['ramvelikitekst'])."</ramveliki><rammali>".htmlspecialchars($_POST['rammalitekst'])."</rammali><batteryveliki>".htmlspecialchars($_POST['batteryvelikitekst'])."</batteryveliki><batterymali>".htmlspecialchars($_POST['batterymalitekst'])."</batterymali></spec>";
         $sveukupno = substr($sveukupno,0,strlen($sveukupno)-8).$specsukupno."</specs>";
         file_put_contents("xmls/PhoneSpecs".$idbrand.".xml", $sve);
         file_put_contents("xmls/PhoneSpecs.xml", $sveukupno);
-        echo("OKEJ OKEJ OKEJ");
+        echo("OKEJ OKEJ OKEJ");*/
+
+        $isti = "select * from phones where nalov='".$naslov."'";
+    $rezultat = $veza->query($isti);
+    if ($rezultat->num_rows < 1)
+        $veza->query("insert into phones set naslov = '".htmlspecialchars($_POST['naslovtekst']) ."', idbrand = '".$idbrand."', slika = '".$target_file."', releaseddate = '". htmlspecialchars($_POST['releaseddatetext']) ."', system = '".htmlspecialchars($_POST['systemtext'])."', memory = '".htmlspecialchars($_POST['memorytext'])."', cameraveliki = '".htmlspecialchars($_POST['cameravelikitekst'])."', cameramali = '".htmlspecialchars($_POST['cameramalitekst'])."', displayveliki = '".htmlspecialchars($_POST['displayvelikitekst'])."', displaymali = '".htmlspecialchars($_POST['displaymalitekst'])."', ramveliki = '".htmlspecialchars($_POST['ramvelikitekst'])."', rammali = '".htmlspecialchars($_POST['rammalitekst'])."', batteryveliki = '".htmlspecialchars($_POST['batteryvelikitekst'])."', batterymali = '".htmlspecialchars($_POST['batterymalitekst'])."'");
+
         header('Location: FPPhoneSpecs.php?idbrand='.$idbrand.'&id='.$brojSpecifikacija);
     }
     

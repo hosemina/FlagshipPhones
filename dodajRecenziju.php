@@ -1,8 +1,13 @@
 <?php
+$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+$veza->exec("set names utf8");
+if (!$veza) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
 
 if(isset($_POST['naslovvijesti'],$_FILES['imagespecs'], $_POST['vijesttext'])) {
-    echo("OKEJSVE");
+    /*echo("OKEJSVE");
         $sve = file_get_contents('xmls/Reviews.xml');
         if($sve[strlen($sve)-2] == '>') $sve = substr($sve,0,strlen($sve)-1);
        
@@ -17,12 +22,17 @@ if(isset($_POST['naslovvijesti'],$_FILES['imagespecs'], $_POST['vijesttext'])) {
         {
             $brojSpecifikacija = $x->id+1;
         }
-        echo($brojSpecifikacija);
-    
+        echo($brojSpecifikacija);*/
+        $sve = $veza->query("select id from reviews order by id desc limit 1");
+         foreach($sve as $nesto)
+         {
+                $brojSpecifikacija = $nesto["id"];
+         }
         /*img upload*/
     
         $target_dir = "uploads/";
-        $target_file = $target_dir . basename($_FILES["imagespecs"]["name"]);
+        $ime_slike = "slikarecenzija".$brojSpecifikacija.".jpg";
+        $target_file = $target_dir . $ime_slike;
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
         // Check if image file is a actual image or fake image
@@ -70,10 +80,14 @@ if(isset($_POST['naslovvijesti'],$_FILES['imagespecs'], $_POST['vijesttext'])) {
             }
         }
     
-        $specs = "<recenzija><id>".$brojSpecifikacija."</id><naslov>" .htmlspecialchars($_POST['naslovvijesti']) . "</naslov><slika>".$target_file."</slika><tekst>".htmlspecialchars($_POST['vijesttext']) ."</tekst></recenzija>";
+        /*$specs = "<recenzija><id>".$brojSpecifikacija."</id><naslov>" .htmlspecialchars($_POST['naslovvijesti']) . "</naslov><slika>".$target_file."</slika><tekst>".htmlspecialchars($_POST['vijesttext']) ."</tekst></recenzija>";
         $sve = substr($sve,0,strlen($sve)-12).$specs."</recenzije>";
         
-        file_put_contents("xmls/Reviews.xml", $sve);
+        file_put_contents("xmls/Reviews.xml", $sve);*/
+        $isti = "select * from reviews where naslov='".htmlspecialchars($_POST['naslovvijesti'] )."'";
+        $rezultat = $veza->query($isti);
+        if ($rezultat->num_rows < 1)
+        $veza->query("insert into reviews set naslov = '".htmlspecialchars($_POST['naslovvijesti'] )."', tekst = '".htmlspecialchars($_POST['vijesttext'])."', slika = '".$target_file."'");
         
         header('Location: FPReview.php?id='.$brojSpecifikacija);
     }

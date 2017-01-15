@@ -1,10 +1,10 @@
 <?php
  $id=$_GET["id"];
-    $idbrand=$_GET["idbrand"];
+ $idbrand=$_GET["idbrand"];
 
 if(isset($_POST['naslovtekst'], $_POST['releaseddatetext'],$_POST['systemtext'],$_POST['memorytext'],$_POST['cameravelikitekst'],$_POST['cameramalitekst'],$_POST['displayvelikitekst'],$_POST['displaymalitekst'],$_POST['ramvelikitekst'],$_POST['rammalitekst'],$_POST['batteryvelikitekst'],$_POST['batterymalitekst'])) {
     
-        $sve = simplexml_load_file('xmls/PhoneSpecs'.$idbrand.'.xml'); 
+        /*$sve = simplexml_load_file('xmls/PhoneSpecs'.$idbrand.'.xml'); 
         $sveukupno = simplexml_load_file('xmls/PhoneSpecs.xml'); 
         foreach($sve->spec as $specifikacija)
         {
@@ -44,7 +44,14 @@ if(isset($_POST['naslovtekst'], $_POST['releaseddatetext'],$_POST['systemtext'],
         $snimi = $sve->asXML();
         $snimiukupno = $sveukupno->asXML();
         file_put_contents('xmls/PhoneSpecs'.$idbrand.'.xml', $snimi);
-        file_put_contents("xmls/PhoneSpecs.xml", $snimiukupno);
+        file_put_contents("xmls/PhoneSpecs.xml", $snimiukupno);*/
+        $veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+        $veza->exec("set names utf8");
+        if (!$veza) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        $veza->query("update phones set naslov = '".htmlspecialchars($_POST['naslovtekst']) ."', releaseddate = '". htmlspecialchars($_POST['releaseddatetext']) ."', system = '".htmlspecialchars($_POST['systemtext'])."', memory = '".htmlspecialchars($_POST['memorytext'])."', cameraveliki = '".htmlspecialchars($_POST['cameravelikitekst'])."', cameramali = '".htmlspecialchars($_POST['cameramalitekst'])."', displayveliki = '".htmlspecialchars($_POST['displayvelikitekst'])."', displaymali = '".htmlspecialchars($_POST['displaymalitekst'])."', ramveliki = '".htmlspecialchars($_POST['ramvelikitekst'])."', rammali = '".htmlspecialchars($_POST['rammalitekst'])."', batteryveliki = '".htmlspecialchars($_POST['batteryvelikitekst'])."', batterymali = '".htmlspecialchars($_POST['batterymalitekst'])."' where id=".$id);
+
         header('Location: FPPhoneSpecs.php?idbrand='.$idbrand.'&id='.$id);
     }
     header('Location: index.php');

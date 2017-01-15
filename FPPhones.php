@@ -9,15 +9,26 @@ include 'header.php';
 <?php
 
 echo("<ul id='telefoniSvi'>");
-    $brands = file_get_contents('xmls/Brands.xml');
+    /*$brands = file_get_contents('xmls/Brands.xml');
 	
     if(strlen($brands) != 0)
     {
         $allBrands = simplexml_load_file('xmls/Brands.xml') or die("Error: Cannot create object");
-		
-        foreach ($allBrands as $x)
+		*/
+        $veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+        $veza->exec("set names utf8");
+        if (!$veza) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        $brands = $veza->query("select id, brand from brands");
+        if (!$brands) {
+              $greska = $veza->errorInfo();
+              print "SQL greška: " . $greska[2];
+              exit();
+         }
+        foreach ($brands as $brand)
         {
-			echo("<li><a href='FPBrands.php?id={$x->idbrand}'>{$x->naziv}</a></li>");
+			echo("<li><a href='FPBrands.php?id={$brand["id"]}'>{$brand["brand"]}</a></li>");
 		}
 	}
 echo("</ul>");

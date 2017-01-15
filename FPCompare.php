@@ -33,7 +33,7 @@ include 'header.php';
 	if(isset($_SESSION["id1"]) && isset($_SESSION["idbrand1"])) {
 	$id1 = $_SESSION["id1"];
 	$idbrand1 = $_SESSION["idbrand1"];
-
+/*
 $specs = file_get_contents('xmls/PhoneSpecs'.$idbrand1.'.xml');
 
     if(strlen($specs) != 0)
@@ -41,33 +41,47 @@ $specs = file_get_contents('xmls/PhoneSpecs'.$idbrand1.'.xml');
         $allSpecs = simplexml_load_file('xmls/PhoneSpecs'.$idbrand1.'.xml');
         foreach ($allSpecs as $x)
         {
-            if($x->id == $id1) {
-            echo('<div class="specs-velikinaslov">'.$x->naslov.'</div>');
+            if($x->id == $id1) {*/
+            $veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+		    $veza->exec("set names utf8");
+		    if (!$veza) {
+		        die("Connection failed: " . mysqli_connect_error());
+		    }
+		    $sve = $veza->query("select idbrand, naslov, slika, releaseddate, system, memory, cameraveliki, cameramali, displayveliki, displaymali, ramveliki, rammali, batteryveliki, batterymali from phones where id=".$id1);
+		    if (!$sve) {
+		          $greska = $veza->errorInfo();
+		          print "SQL greška: " . $greska[2];
+		          exit();
+		     }
+		     foreach ($sve as $novost) {
+		         $phone = $novost;
+		     }
+            echo('<div class="specs-velikinaslov">'.$phone["naslov"].'</div>');
             echo('<div class="specs">');
-            echo('<center><img src="'.$x->slika.'" class="slikaspecscompare" alt="Problem sa prikazivanjem slike"></center>');
+            echo('<center><img src="'.$phone["slika"].'" class="slikaspecscompare" alt="Problem sa prikazivanjem slike"></center>');
             echo('<div class="sveskupacompare"><div class="redspecs">');
             echo('<ul>');
-	        echo('<li id="releasedDate" class="listaspecs">'.$x->releaseddate.'</li>');
-    		echo('<li id="system" class ="listaspecs">'.$x->system.'</li>');
-    		echo('<li id="memory" class ="listaspecs">'.$x->memory.'</li>');
+	        echo('<li id="releasedDate" class="listaspecs">'.$phone["releaseddate"].'</li>');
+    		echo('<li id="system" class ="listaspecs">'.$phone["system"].'</li>');
+    		echo('<li id="memory" class ="listaspecs">'.$phone["memory"].'</li>');
         	echo('</ul></div> <div id ="camera" class ="kolonaspecs"><img src="camera.png" class="malaslicica" alt="Camera">');
-            echo('<div class="tekst-kolonaspecs">'.$x->cameraveliki.'</div>');
-            echo('<div class="malitekst-kolonaspecs">'.$x->cameramali.'</div>');
+            echo('<div class="tekst-kolonaspecs">'.$phone["cameraveliki"].'</div>');
+            echo('<div class="malitekst-kolonaspecs">'.$phone["cameramali"].'</div>');
             echo(' </div><div id ="display" class ="kolonaspecs"><img src="size.png" class="malaslicica" alt="Display">');
-	        echo('<div class="tekst-kolonaspecs">'.$x->displayveliki.'</div>');
-			echo('<div class="malitekst-kolonaspecs">'.$x->displaymali.'</div>');
+	        echo('<div class="tekst-kolonaspecs">'.$phone["displayveliki"].'</div>');
+			echo('<div class="malitekst-kolonaspecs">'.$phone["displaymali"].'</div>');
 			echo('</div><div id ="ram" class ="kolonaspecs"><img src="ram.png" class="malaslicica" alt="RAM">');
-			echo('<div class="tekst-kolonaspecs">'.$x->ramveliki.'</div>');
-			echo('<div class="malitekst-kolonaspecs">'.$x->rammali.'</div>');
+			echo('<div class="tekst-kolonaspecs">'.$phone["ramveliki"].'</div>');
+			echo('<div class="malitekst-kolonaspecs">'.$phone["rammali"].'</div>');
 			echo('</div><div id ="battery" class ="kolonaspecs"><img src="battery.png" class="malaslicica" alt="Battery">');
-			echo('<div class="tekst-kolonaspecs">'.$x->batteryveliki.'</div>');
-			echo('<div class="malitekst-kolonaspecs">'.$x->batterymali.'</div>');
+			echo('<div class="tekst-kolonaspecs">'.$phone["batteryveliki"].'</div>');
+			echo('<div class="malitekst-kolonaspecs">'.$phone["batterymali"].'</div>');
 			echo('</div></div>');
 			echo('</div>');
 }
-}
-}
-}
+
+
+
 ?>
  
 </div>
@@ -96,7 +110,7 @@ $specs = file_get_contents('xmls/PhoneSpecs'.$idbrand1.'.xml');
 	if(isset($_SESSION["id2"]) && isset($_SESSION["idbrand2"])) {
 	$id2 = $_SESSION["id2"];
 	$idbrand2 = $_SESSION["idbrand2"];
-
+/*
 $specs = file_get_contents('xmls/PhoneSpecs'.$idbrand2.'.xml');
 
     if(strlen($specs) != 0)
@@ -104,33 +118,45 @@ $specs = file_get_contents('xmls/PhoneSpecs'.$idbrand2.'.xml');
         $allSpecs = simplexml_load_file('xmls/PhoneSpecs'.$idbrand2.'.xml');
         foreach ($allSpecs as $x)
         {
-            if($x->id == $id2) {
-            echo('<div class="specs-velikinaslov">'.$x->naslov.'</div>');
+            if($x->id == $id2) {*/
+            $veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+		    $veza->exec("set names utf8");
+		    if (!$veza) {
+		        die("Connection failed: " . mysqli_connect_error());
+		    }
+		    $sve = $veza->query("select idbrand, naslov, slika, releaseddate, system, memory, cameraveliki, cameramali, displayveliki, displaymali, ramveliki, rammali, batteryveliki, batterymali from phones where id=".$id2);
+		    if (!$sve) {
+		          $greska = $veza->errorInfo();
+		          print "SQL greška: " . $greska[2];
+		          exit();
+		     }
+		     foreach ($sve as $novost) {
+		         $phone = $novost;
+		     }
+            echo('<div class="specs-velikinaslov">'.$phone["naslov"].'</div>');
             echo('<div class="specs">');
-            echo('<center><img src="'.$x->slika.'" class="slikaspecscompare" alt="Problem sa prikazivanjem slike"></center>');
+            echo('<center><img src="'.$phone["slika"].'" class="slikaspecscompare" alt="Problem sa prikazivanjem slike"></center>');
             echo('<div class="sveskupacompare"><div class="redspecs">');
             echo('<ul>');
-	        echo('<li id="releasedDate" class="listaspecs">'.$x->releaseddate.'</li>');
-    		echo('<li id="system" class ="listaspecs">'.$x->system.'</li>');
-    		echo('<li id="memory" class ="listaspecs">'.$x->memory.'</li>');
+	        echo('<li id="releasedDate" class="listaspecs">'.$phone["releaseddate"].'</li>');
+    		echo('<li id="system" class ="listaspecs">'.$phone["system"].'</li>');
+    		echo('<li id="memory" class ="listaspecs">'.$phone["memory"].'</li>');
         	echo('</ul></div> <div id ="camera" class ="kolonaspecs"><img src="camera.png" class="malaslicica" alt="Camera">');
-            echo('<div class="tekst-kolonaspecs">'.$x->cameraveliki.'</div>');
-            echo('<div class="malitekst-kolonaspecs">'.$x->cameramali.'</div>');
+            echo('<div class="tekst-kolonaspecs">'.$phone["cameraveliki"].'</div>');
+            echo('<div class="malitekst-kolonaspecs">'.$phone["cameramali"].'</div>');
             echo(' </div><div id ="display" class ="kolonaspecs"><img src="size.png" class="malaslicica" alt="Display">');
-            echo('<div class="tekst-kolonaspecs">'.$x->displayveliki.'</div>');
-			echo('<div class="malitekst-kolonaspecs">'.$x->displaymali.'</div>');
+	        echo('<div class="tekst-kolonaspecs">'.$phone["displayveliki"].'</div>');
+			echo('<div class="malitekst-kolonaspecs">'.$phone["displaymali"].'</div>');
 			echo('</div><div id ="ram" class ="kolonaspecs"><img src="ram.png" class="malaslicica" alt="RAM">');
-			echo('<div class="tekst-kolonaspecs">'.$x->ramveliki.'</div>');
-			echo('<div class="malitekst-kolonaspecs">'.$x->rammali.'</div>');
+			echo('<div class="tekst-kolonaspecs">'.$phone["ramveliki"].'</div>');
+			echo('<div class="malitekst-kolonaspecs">'.$phone["rammali"].'</div>');
 			echo('</div><div id ="battery" class ="kolonaspecs"><img src="battery.png" class="malaslicica" alt="Battery">');
-			echo('<div class="tekst-kolonaspecs">'.$x->batteryveliki.'</div>');
-			echo('<div class="malitekst-kolonaspecs">'.$x->batterymali.'</div>');
+			echo('<div class="tekst-kolonaspecs">'.$phone["batteryveliki"].'</div>');
+			echo('<div class="malitekst-kolonaspecs">'.$phone["batterymali"].'</div>');
 			echo('</div></div>');
 			echo('</div>');
 }
-}
-}
-}
+
 ?>
 
 </div>

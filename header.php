@@ -9,9 +9,9 @@
  <title>Flagship Phones</title>
  <link rel="shortcut icon" href="icon.png" />
  <link rel="stylesheet" href="FP.css">
-
 </head>
 <body>
+<script src="script.js"></script>
 
 <div class="container1">
  <header>
@@ -24,20 +24,28 @@
   <div id="myDropdown" class="dropdown-content">
   <?php 
 
-	 $brands = file_get_contents('xmls/Brands.xml');
+	 /*$brands = file_get_contents('xmls/Brands.xml');
     if(strlen($brands) != 0)
     {
-        $allBrands = simplexml_load_file('xmls/Brands.xml');
-		$i = 0;
-        foreach ($allBrands as $x)
+        $allBrands = simplexml_load_file('xmls/Brands.xml');*/
+        $veza = new PDO('mysql:dbname=flagshipphones;host=localhost;charset=utf8', 'emina', 'emina123');
+        $veza->exec("set names utf8");
+        $brands = $veza->query("select id, brand from brands");
+        if (!$brands) {
+              $greska = $veza->errorInfo();
+              print "SQL greška: " . $greska[2];
+              exit();
+         }
+		    $i = 0;
+        foreach ($brands as $brand)
         {
-			$link = "'FPBrands.php?id={$x->idbrand}','_self',false";
-			echo('<div class="a" onClick="window.open('.$link.')">'.$x->naziv.'</div>');
-			$i++;
-			if ($i == 3)
-				break;
+          $id = $brand["id"];
+    			$link = "'FPBrands.php?id={$id}','_self',false";
+    			echo('<div class="a" onClick="window.open('.$link.')">'.$brand["brand"].'</div>');
+    			$i++;
+    			if ($i == 3)
+    				break;
 		}
-	}
   ?>
 
 	 <div class="a" onClick="window.open('FPPhones.php','_self',false)">Više marki...</a></div>
@@ -53,7 +61,7 @@
   <div class="login">
   <?php 
   if(isset($_SESSION["admin"])) {
- echo(' <a href="logout.php">logout</a><a> | admin'); 
+ echo(' <a href="admin.php">Mogucnosti</a><a> | <a href="logout.php">logout</a><a> | admin'); 
 }
 else if(isset($_SESSION["user"]))
 {

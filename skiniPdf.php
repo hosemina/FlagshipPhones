@@ -8,31 +8,35 @@
 		$pdf->SetFont("Arial", "B", 14);
 	
 		$pdf->Cell(100, 10, "", 0, 1);
-		$fajl = glob('xmls/PhoneSpecs.xml');
-			
-			$xml= simplexml_load_file('xmls/PhoneSpecs.xml'); 
-			$phone = $xml->spec;
-			foreach ($xml->spec as $spec) {
-				if($id == $spec->id && $idbrand == $spec->idbrand) {
-						
-
+		
+			$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+            
+            $sve = $veza->query("select naslov, slika, releaseddate, system, memory, cameraveliki, cameramali, displayveliki, displaymali, ramveliki, rammali, batteryveliki, batterymali from phones where id=".$id);
+            if (!$sve) {
+                  $greska = $veza->errorInfo();
+                  print "SQL greška: " . $greska[2];
+                  exit();
+             }
+             foreach ($sve as $novost) {
+                 $phone = $novost;
+             }
 						
 						$pdf->Cell(100, 100, "", 0, 1, 'C');
-						$pdf->Cell(180, 10, $spec->naslov, 1, 1, 'C');
-						$pdf->Cell(180, 10, $spec->releaseddate, 1, 1,'C');
-						$pdf->Cell(180, 10, $spec->system, 1, 1,'C');
-						$pdf->Cell(180, 10, $spec->memory, 1, 1,'C');
-						$pdf->Cell(180, 10, $spec->cameraveliki, 1, 1,'C');
-						$pdf->Cell(180, 10, $spec->cameramali, 1, 1,'C');
-						$pdf->Cell(180, 10, $spec->displayveliki, 1, 1,'C');
-						$pdf->Cell(180, 10, $spec->displaymali, 1, 1,'C');
-						$pdf->Cell(180, 10, $spec->ramveliki, 1, 1,'C');
-						$pdf->Cell(180, 10, $spec->rammali, 1, 1,'C');
-						$pdf->Cell(180, 10, $spec->batteryveliki, 1, 1,'C');
-						$pdf->Cell(180, 10, $spec->batterymali, 1, 1,'C');
-						$pdf->Image("$spec->slika", 30, 10, -200);
-						break;
-					}
-				}
+						$pdf->Cell(180, 10, $phone["naslov"], 1, 1, 'C');
+						$pdf->Cell(180, 10, $phone["releaseddate"], 1, 1,'C');
+						$pdf->Cell(180, 10, $phone["system"], 1, 1,'C');
+						$pdf->Cell(180, 10, $phone["memory"], 1, 1,'C');
+						$pdf->Cell(180, 10, $phone["cameraveliki"], 1, 1,'C');
+						$pdf->Cell(180, 10, $phone["cameramali"], 1, 1,'C');
+						$pdf->Cell(180, 10, $phone["displayveliki"], 1, 1,'C');
+						$pdf->Cell(180, 10, $phone["displaymali"], 1, 1,'C');
+						$pdf->Cell(180, 10, $phone["ramveliki"], 1, 1,'C');
+						$pdf->Cell(180, 10, $phone["rammali"], 1, 1,'C');
+						$pdf->Cell(180, 10, $phone["batteryveliki"], 1, 1,'C');
+						$pdf->Cell(180, 10, $phone["batterymali"], 1, 1,'C');
+						$pdf->Image($phone['slika'], 30, 10, -200);
+					
+					
+				
 		$pdf->Output('D','PhoneSpecs.pdf');
 		?>

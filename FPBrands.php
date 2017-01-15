@@ -8,13 +8,13 @@ include 'header.php';
 
 <?php
 
-    $brands = file_get_contents('xmls/Brands.xml');
+   /* $brands = file_get_contents('xmls/Brands.xml');
     if(strlen($brands) != 0)
     {
 	
-        $allBrands = simplexml_load_file('xmls/Brands.xml');
+        $allBrands = simplexml_load_file('xmls/Brands.xml');*/
 		$id = $_GET["id"];
-		foreach ($allBrands as $x)
+		/*foreach ($allBrands as $x)
         {
 			if($id == $x->idbrand) {
 			echo('<div class="velikinaslov">'.$x->naziv.'</div>');
@@ -33,7 +33,33 @@ include 'header.php';
 			}
 			}
 		}
-}
+}*/
+	$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+    $veza->exec("set names utf8");
+    
+    $brands = $veza->query("select brand from brands where id = ".$id);
+    if (!$brands) {
+          $greska = $veza->errorInfo();
+          print "SQL greška: " . $greska[2];
+          exit();
+     }
+     foreach ($brands as $brand) {
+         $brandname = $brand;
+     }
+     echo('<div class="velikinaslov">'.$brandname["brand"].'</div>');
+			echo('<ul id="phonesGrid">');
+     $sve = $veza->query("select id, naslov, slika from phones where idbrand=".$id);
+    if (!$sve) {
+          $greska = $veza->errorInfo();
+          print "SQL greška: " . $greska[2];
+          exit();
+     }
+     foreach ($sve as $phone) {
+         echo('<li>');
+				echo("<div class='phone'><img src='{$phone["slika"]}' alt='{$phone["naslov"]}' class='phoneslika'></div>");
+				echo('<div class="phonename"><a href="FPPhoneSpecs.php?idbrand='.$id.'&id='.$phone["id"].'" class="phonenameLink">'.$phone["naslov"].'</a></div></li>');
+				}
+			echo("</ul>");
 if(isset($_SESSION["admin"])) {
 	echo('<div class="mogucnosti"><a href="FPPhoneSpecsForma.php?idbrand='.$id.'"><img src="dodaj.png" class="ikoniceadmin" alt="Problem sa prikazivanjem slike"></a> </div>');}
 

@@ -6,63 +6,91 @@ include 'header.php';
 
 <div class="velikinaslov">Latest specs</div>
 <?php
-    $recenzije = file_get_contents('xmls/PhoneSpecs.xml');
+    /*$recenzije = file_get_contents('xmls/PhoneSpecs.xml');
     if(strlen($recenzije) != 0)
     {
-        $sveRecenzije = simplexml_load_file('xmls/PhoneSpecs.xml');
+        $sveRecenzije = simplexml_load_file('xmls/PhoneSpecs.xml');*/
 		$i = 0;
-		foreach ($sveRecenzije as $x)
-        {
-			echo("<a href='FPPhoneSpecs.php?idbrand=".$x->idbrand."&id=".$x->id."'><div class='topvijest'>");
-			echo("<img src='{$x->slika}' alt='{$x->naslov}'>");
-			echo("<div class='naslovtopvijest'><span>{$x->naslov}</span></div>");
+		$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+	    $veza->exec("set names utf8");
+	    $news = $veza->query("select id, idbrand, naslov, slika from phones");
+	    if (!$news) {
+	          $greska = $veza->errorInfo();
+	          print "SQL greška: " . $greska[2];
+	          exit();
+	     }
+		foreach ($news as $new) {
+			echo("<a href='FPPhoneSpecs.php?idbrand=".$new["idbrand"]."&id=".$new["id"]."'><div class='topvijest'>");
+			echo("<img src='{$new["slika"]}' alt='{$new["naslov"]}'>");
+			echo("<div class='naslovtopvijest'><span>{$new["naslov"]}</span></div>");
 			echo('</div></a>');
 			$i++;
 			if ($i == 3) 
 				break;
 		}
-	}
+	
 ?>
 <div class="velikinaslov">Latest reviews</div>
 <?php
-    $recenzije = file_get_contents('xmls/Reviews.xml');
+    /*$recenzije = file_get_contents('xmls/Reviews.xml');
     if(strlen($recenzije) != 0)
     {
-        $sveRecenzije = simplexml_load_file('xmls/Reviews.xml');
+        $sveRecenzije = simplexml_load_file('xmls/Reviews.xml');*/
 		$i = 0;
-		foreach ($sveRecenzije as $x)
+		$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+	    $veza->exec("set names utf8");
+	    if (!$veza) {
+	        die("Connection failed: " . mysqli_connect_error());
+	    }
+	    $news = $veza->query("select id, naslov, slika, tekst from reviews");
+	    if (!$news) {
+	          $greska = $veza->errorInfo();
+	          print "SQL greška: " . $greska[2];
+	          exit();
+	     }
+		foreach ($news as $new)
         {
-			echo("<a href='FPReview.php?id={$x->id}'><div class='topvijest'>");
-			
-			echo("<img src='{$x->slika}' alt='{$x->naslov}'>");
-			echo("<div class='naslovtopvijest'><span>{$x->naslov}</span></div>");
+			echo("<a href='FPReview.php?id={$new["id"]}'><div class='topvijest'>");
+			echo("<img src='{$new["slika"]}' alt='{$new["naslov"]}'>");
+			echo("<div class='naslovtopvijest'><span>{$new["naslov"]}</span></div>");
 			echo('</div></a>');
 			$i++;
 			if ($i == 3) 
 				break;
 		}
-	}
+	
 ?>
 <div class="velikinaslov">News</div>
 <?php
-    $novosti = file_get_contents('xmls/News.xml');
+    /*$novosti = file_get_contents('xmls/News.xml');
     if(strlen($novosti) != 0)
     {
-        $sveNovosti = simplexml_load_file('xmls/News.xml');
+        $sveNovosti = simplexml_load_file('xmls/News.xml');*/
 		$i = 0;
-		foreach ($sveNovosti as $x)
+		$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+	    $veza->exec("set names utf8");
+	    if (!$veza) {
+	        die("Connection failed: " . mysqli_connect_error());
+	    }
+	    $news = $veza->query("select id, naslov, slika, tekst from news");
+	    if (!$news) {
+	          $greska = $veza->errorInfo();
+	          print "SQL greška: " . $greska[2];
+	          exit();
+	     }
+		foreach ($news as $new)
         {
-			echo("<a href='FPNew.php?id={$x->id}'><div class='vijest'>");
-			$tekst = substr($x->tekst, 0, 400);
+			echo("<a href='FPNew.php?id={$new["id"]}'><div class='vijest'>");
+			$tekst = substr($new["tekst"], 0, 400);
 			$tekst = $tekst."...";
-			echo("<img src='{$x->slika}' alt='Problem sa prikazivanjem slike' class='slikareview'><div class='sadrzajvijesti'>".$tekst."</div>");
-			echo("<div class='vijestnaslov'><span>{$x->naslov}</span></div>");
+			echo("<img src='{$new["slika"]}' alt='Problem sa prikazivanjem slike' class='slikareview'><div class='sadrzajvijesti'>".$tekst."</div>");
+			echo("<div class='vijestnaslov'><span>{$new["naslov"]}</span></div>");
 			echo('</div></a>');
 			$i++;
 			if ($i == 3) 
 				break;
 		}
-	}
+	
 ?>
 </div></article>
 <?php

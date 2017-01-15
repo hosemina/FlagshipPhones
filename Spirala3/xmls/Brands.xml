@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<brands>
+<brand><idbrand>1</idbrand><naziv>Samsung</naziv></brand>
+<brand><idbrand>2</idbrand><naziv>Apple</naziv></brand>
+<brand><idbrand>3</idbrand><naziv>Microsoft</naziv></brand>
+<brand><idbrand>4</idbrand><naziv>Sony</naziv></brand>
+<brand><idbrand>5</idbrand><naziv>Nokia</naziv></brand>
+<brand><idbrand>6</idbrand><naziv>Sony</naziv></brand>
+<brand><idbrand>7</idbrand><naziv>LG</naziv></brand>
+<brand><idbrand>8</idbrand><naziv>HTC</naziv></brand>
+<brand><idbrand>9</idbrand><naziv>Motorola</naziv></brand>
+<brand><idbrand>10</idbrand><naziv>Huawei</naziv></brand>
+<brand><idbrand>11</idbrand><naziv>Lenovo</naziv></brand>
+<brand><idbrand>12</idbrand><naziv>Xiaomi</naziv></brand>
+<brand><idbrand>13</idbrand><naziv>Acer</naziv></brand>
+<brand><idbrand>14</idbrand><naziv>Asus</naziv></brand>
+<brand><idbrand>15</idbrand><naziv>Oppo</naziv></brand>
+<brand><idbrand>16</idbrand><naziv>Oneplus</naziv></brand>
+<brand><idbrand>17</idbrand><naziv>Meizu</naziv></brand>
+<brand><idbrand>18</idbrand><naziv>Blackberry</naziv></brand>
+<brand><idbrand>19</idbrand><naziv>Alcatel</naziv></brand>
+<brand><idbrand>20</idbrand><naziv>ZTE</naziv></brand>
+<brand><idbrand>21</idbrand><naziv>Toshiba</naziv></brand>
+</brands>

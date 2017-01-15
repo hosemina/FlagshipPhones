@@ -6,22 +6,26 @@ include 'header.php';
 
 
 <?php
-    $novosti = file_get_contents('xmls/News.xml');
+    /*$novosti = file_get_contents('xmls/News.xml');
     if(strlen($novosti) != 0)
     {
-        $sveNovosti = simplexml_load_file('xmls/News.xml');
+        $sveNovosti = simplexml_load_file('xmls/News.xml');*/
 		$id = $_GET["id"];
-		foreach ($sveNovosti as $x)
-        {
-			if($id == $x->id) {
-				echo("<div class='velikinaslov'>".htmlspecialchars($x->naslov, ENT_QUOTES, 'UTF-8')."</div><div class='vijest'>");
-				echo("<center><img src='{$x->slika}' alt='Problem sa prikazivanjem slike'></center>");
-				echo("<center><h3>".htmlspecialchars($x->tekst, ENT_QUOTES, 'UTF-8')."</h3></center></div>");
+		$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+	    $veza->exec("set names utf8");
+	    $news = $veza->query("select naslov, slika, tekst from news where id = ".$id);
+	    if (!$news) {
+	          $greska = $veza->errorInfo();
+	          print "SQL greška: " . $greska[2];
+	          exit();
+	     }
+	     foreach ($news as $new) {
+	         $novost = $new;
+	     }
+				echo("<div class='velikinaslov'>".htmlspecialchars($novost["naslov"], ENT_QUOTES, 'UTF-8')."</div><div class='vijest'>");
+				echo("<center><img src='{$novost["slika"]}' alt='Problem sa prikazivanjem slike'></center>");
+				echo("<center><h3>".htmlspecialchars($novost["tekst"], ENT_QUOTES, 'UTF-8')."</h3></center></div>");
 
-				}
-        
-		}
-	}
 	if(isset($_SESSION["admin"])) {
 	echo('<div class="mogucnosti"><a href="FPNewsForma.php"><img src="dodaj.png" class="ikoniceadmin" alt="Problem sa prikazivanjem slike"></a>  <a href="FPNewsFormaIzmijeni.php?id='.$id.'"><img src="promijeni.png" class="ikoniceadmin" alt="Problem sa prikazivanjem slike"></a>  <a href="obrisiNovost.php?id='.$id.'"><img src="obrisi.png" class="ikoniceadmin" alt="Problem sa prikazivanjem slike"></a>  </div>');
 }

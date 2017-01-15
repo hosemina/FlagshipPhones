@@ -1,6 +1,53 @@
 <?php
+$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+$veza->exec("set names utf8");
+if (!$veza) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+$specs = $veza->query("select id, idbrand, naslov, slika, releaseddate, system, memory, cameraveliki, cameramali, displayveliki, displaymali, ramveliki, rammali, batteryveliki, batterymali from phones");
+
+if (!$specs) {
+      $greska = $veza->errorInfo();
+      print "SQL greška: " . $greska[2];
+      exit();
+ }
+$xml = "<?xml version='1.0' encoding='UTF-8'?><specs>";
+ foreach ($specs as $spec) {
+  $xml.="<spec><id>";
+  $xml.=$spec["id"];
+  $xml.="</id><idbrand>";
+  $xml.=$spec["idbrand"];
+  $xml.="</idbrand><naslov>";
+  $xml.=$spec["naslov"];
+  $xml.="</naslov><releaseddate>";
+  $xml.=$spec["releaseddate"];
+  $xml.="</releaseddate><system>";
+  $xml.=$spec["system"];
+  $xml.="</system><memory>";
+  $xml.=$spec["memory"];
+  $xml.="</memory><cameraveliki>";
+  $xml.=$spec["cameraveliki"];
+  $xml.="</cameraveliki><cameramali>";
+  $xml.=$spec["cameramali"];
+  $xml.="</cameramali><displayveliki>";
+  $xml.=$spec["displayveliki"];
+  $xml.="</displayveliki><displaymali>";
+  $xml.=$spec["displaymali"];
+  $xml.="</displaymali><ramveliki>";
+  $xml.=$spec["ramveliki"];
+  $xml.="</ramveliki><rammali>";
+  $xml.=$spec["rammali"];
+  $xml.="</rammali><batteryveliki>";
+  $xml.=$spec["batteryveliki"];
+  $xml.="</batteryveliki><batterymali>";
+  $xml.=$spec["batterymali"];
+  $xml.="</batterymali></spec>";
+}
+$xml.="</specs>";
+file_put_contents("xmls/PhoneSearch.xml", $xml);
+
 $xmlDoc=new DOMDocument();
-$xmlDoc->load("xmls/PhoneSpecs.xml");
+$xmlDoc->load("xmls/PhoneSearch.xml");
 $x=$xmlDoc->getElementsByTagName('spec');
 //get the q parameter from URL
 $q=$_GET["q"];
