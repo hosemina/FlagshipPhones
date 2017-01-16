@@ -179,3 +179,6 @@ svi fajlovi su isti kao u spirali 3, osim: </br>
 prebaciUBazu.php - skripta za prebacivanje iz XML-a u bazu </br>
 Admin.php - Stranica koju može vidjeti samo admin </br>
 JSON.php - REST metoda za pristupanje servisu </br>
+Folderi: </br>
+POSTMANScreenshots - screenshot-ovi iz POSTMAN-a </br>
+DumpIERD - dump baze i ERD</br>
