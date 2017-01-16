@@ -83,6 +83,9 @@ slika1.jpg, slika2.jpg, slika3.jpg, slika4.jpg, slika5.jpg - slike koje se koris
 slika7.jpg - slika telefona koja se koristi na podstranici specifikacija Samsung Galaxy S7 Edge telefona</br>
 s7edgeping.jpg, s7edgeblack.jpg, s7edgesilver.jpg, s7edgewhite.jpg, s7edgestr.jpg - slike koje se koriste u galeriji</br>
 
+
+
+
 ##Spirala 3
 ####I - <b>Šta je urađeno? </b>
 1. Napravljena serijalizacija svih podataka u XML fajlove - sve novosti, recenzije, specifikacije su serijalizovane. Obični korisnik nema nikakvih mogućnosti nad podacima, dok admin korisnik ima mogućnost brisanja, dodavanja i mijenjanja svih novosti, recenzija i specifikacija. </br> Adminovi podaci su: username: admin, password: password. </br>
@@ -148,7 +151,34 @@ skiniCsv.php, skiniPdf.php - skidanje .csv i .pdf fajlova </br>
 OSTALO - slike </br>
 
 
+##Spirala 4
+####I - <b>Šta je urađeno? </b>
+a) Napravljena MySQL baza podataka koja se sastoji od sedam tabela. ERD i dump baze možete vidjeti u folderu DumpIERD.
+</br>
+b) Skripta prebaciUBazu.php prebacuje sve podatke iz XML u bazu podataka. Kada se prijavite kao admin (username: admin, password: password), u gornjem desnom uglu stranice se nalazi "Mogucnosti". Klikom na to otvara se stranica namijenjena za admina. Tu se nalazi mogućnost dodavanja fajlova iz XML-a u bazu (koje sam ja već dodala, ali mislim da ima nekih koji nisu tu; u svakom slučaju možete nešto obrisati pa probati).  </br>
+c) Prepravljene sve skripte da podaci čuvaju i kupe iz baze umjesto iz XML-a. </br>
+d) Napravljen hosting webstranice na OpenShift. Napravljen i deployment baze. </br> Link stranice: http://flagshipphones-flagshipphones.44fs.preview.openshiftapps.com/ </br>
+f) Napravljena metoda REST serivsa koja vraća sve telefone sa određenim id-om proizvođača u JSON formatu. Samo admin ima tu mogućnost koju možemo naći kad se prijavimo kao admin pa onda Mogućnosti i unesemo id proizvođača čije proizvode želimo da dobijemo u JSON formatu.
+</br>
+e) Priloženi screenshot-ovi testiranja servisa iz POSTMAN-a. Vidimo ovdje da navodimo link na servis i idbrand (tj. id proizvođača telefona). Npr.: http://flagshipphones-flagshipphones.44fs.preview.openshiftapps.com/JSON.php?idbrand=3 .  
+</br>
 
+####II - <b>Šta nije urađeno? </b>
+</br>
 
+####III - <b>Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)</b>
 
+</br>
+ 
+####IV -  <b>Bug-ovi koje ste primijetili ali ne znate rješenje </b>
 
+-</br>
+
+####V -<b> Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi </b>
+svi fajlovi su isti kao u spirali 3, osim: </br>
+prebaciUBazu.php - skripta za prebacivanje iz XML-a u bazu </br>
+Admin.php - Stranica koju može vidjeti samo admin </br>
+JSON.php - REST metoda za pristupanje servisu </br>
+Folderi: </br>
+POSTMANScreenshots - screenshot-ovi iz POSTMAN-a </br>
+DumpIERD - dump baze i ERD</br>
