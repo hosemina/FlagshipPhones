@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2017 at 02:00 AM
+-- Generation Time: Jan 16, 2017 at 02:02 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `flagshipphones`
 --
+CREATE DATABASE IF NOT EXISTS `flagshipphones` DEFAULT CHARACTER SET utf32 COLLATE utf32_slovenian_ci;
+USE `flagshipphones`;
 
 -- --------------------------------------------------------
 

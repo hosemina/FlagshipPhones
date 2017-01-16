@@ -11,7 +11,7 @@ include 'header.php';
     {
         $sveRecenzije = simplexml_load_file('xmls/PhoneSpecs.xml');*/
 		$i = 0;
-		$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+		$veza = new PDO('mysql:host='. getenv('MYSQL_SERVICE_HOST') .';port=3306;dbname=flagshipphones', 'emina', 'emina123');
 	    $veza->exec("set names utf8");
 	    $news = $veza->query("select id, idbrand, naslov, slika from phones");
 	    if (!$news) {
