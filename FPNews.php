@@ -14,7 +14,7 @@ include 'header.php';
 	    if (!$veza) {
 	        die("Connection failed: " . mysqli_connect_error());
 	    }
-	    $news = $veza->query("select id, naslov, slika, tekst from news");
+	    $news = $veza->query("select id, naslov, slika, tekst from news order by id desc");
 	    if (!$news) {
 	          $greska = $veza->errorInfo();
 	          print "SQL greška: " . $greska[2];
