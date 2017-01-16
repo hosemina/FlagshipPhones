@@ -13,8 +13,7 @@ include 'header.php';
 		$i = 0;
 		$veza = new PDO('mysql:host='. getenv('MYSQL_SERVICE_HOST') .';port=3306;dbname=flagshipphones', 'emina', 'emina123');
 	    $veza->exec("set names utf8");
-	    //$news = $veza->query("select id, idbrand, naslov, slika from phones");
-	    $news = $veza->query("SELECT * FROM (SELECT * FROM news ORDER BY id ASC LIMIT 3) as r ORDER BY id");
+	    $news = $veza->query("select id, idbrand, naslov, slika from phones");
 	    if (!$news) {
 	          $greska = $veza->errorInfo();
 	          print "SQL greška: " . $greska[2];
@@ -73,7 +72,8 @@ include 'header.php';
 	    if (!$veza) {
 	        die("Connection failed: " . mysqli_connect_error());
 	    }
-	    $news = $veza->query("select id, naslov, slika, tekst from news");
+	    
+	    $news = $veza->query("SELECT * FROM (SELECT * FROM news ORDER BY id ASC LIMIT 3)");
 	    if (!$news) {
 	          $greska = $veza->errorInfo();
 	          print "SQL greška: " . $greska[2];
