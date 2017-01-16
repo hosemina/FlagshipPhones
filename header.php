@@ -61,7 +61,7 @@
   <div class="login">
   <?php 
   if(isset($_SESSION["admin"])) {
- echo(' <a href="admin.php">Mogucnosti</a><a> | <a href="logout.php">logout</a><a> | admin'); 
+ echo(' <a href="Admin.php">Mogucnosti</a><a> | <a href="logout.php">logout</a><a> | admin'); 
 }
 else if(isset($_SESSION["user"]))
 {

@@ -30,7 +30,7 @@ echo("<ul id='telefoniSvi'>");
         {
 			echo("<li><a href='FPBrands.php?id={$brand["id"]}'>{$brand["brand"]}</a></li>");
 		}
-	}
+
 echo("</ul>");
 ?>
 
