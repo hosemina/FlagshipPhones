@@ -1,6 +1,6 @@
 <?php
 //$veza = new PDO('mysql:dbname=flagshipphones;host=localhost;charset=utf8', 'root', '');
-$veza = mysqli_connect("localhost", "emina", "emina123", "flagshipphones");
+$veza = mysqli_connect( getenv('MYSQL_SERVICE_HOST'), "emina", "emina123", "flagshipphones");
 $sverecenzije = simplexml_load_file('xmls/Reviews.xml'); 
 
 foreach( $sverecenzije->recenzija as $recenzija)

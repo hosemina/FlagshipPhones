@@ -28,7 +28,7 @@
     if(strlen($brands) != 0)
     {
         $allBrands = simplexml_load_file('xmls/Brands.xml');*/
-        $veza = new PDO('mysql:dbname=flagshipphones;host=127.0.0.1;charset=utf8;port=3306', 'emina', 'emina123');
+        $veza = new PDO('mysql:host='. getenv('MYSQL_SERVICE_HOST') .';port=3306;dbname=flagshipphones', 'emina', 'emina123');
         $veza->exec("set names utf8");
         $brands = $veza->query("select id, brand from brands");
         if (!$brands) {

@@ -34,7 +34,7 @@ include 'header.php';
 			}
 		}
 }*/
-	$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+	$veza = new PDO('mysql:host='. getenv('MYSQL_SERVICE_HOST') .';port=3306;dbname=flagshipphones', 'emina', 'emina123');
     $veza->exec("set names utf8");
     
     $brands = $veza->query("select brand from brands where id = ".$id);

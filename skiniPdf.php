@@ -9,7 +9,7 @@
 	
 		$pdf->Cell(100, 10, "", 0, 1);
 		
-			$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+			$veza = new PDO('mysql:host='. getenv('MYSQL_SERVICE_HOST') .';port=3306;dbname=flagshipphones', 'emina', 'emina123');
             
             $sve = $veza->query("select naslov, slika, releaseddate, system, memory, cameraveliki, cameramali, displayveliki, displaymali, ramveliki, rammali, batteryveliki, batterymali from phones where id=".$id);
             if (!$sve) {

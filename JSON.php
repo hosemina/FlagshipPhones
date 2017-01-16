@@ -7,7 +7,7 @@ function zag() {
 function rest_get($request, $data) { 
 	$idbrand = $_GET['idbrand'];
 
-	$veza = new PDO('mysql:host=localhost;dbname=flagshipphones;charset=utf8', 'emina', 'emina123');
+	$veza = new PDO('mysql:host='. getenv('MYSQL_SERVICE_HOST') .';port=3306;dbname=flagshipphones', 'emina', 'emina123');
 	$veza->exec("set names utf8");
 
 	$upit = $veza->prepare("SELECT * FROM phones WHERE idbrand=?");

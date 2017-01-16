@@ -11,7 +11,7 @@ include 'header.php';
     {
         $sveNovosti = simplexml_load_file('xmls/News.xml');*/
 		$id = $_GET["id"];
-		$veza = new PDO('mysql:host=localhost;dbname=flagshipphones', 'emina', 'emina123');
+		$veza = new PDO('mysql:host='. getenv('MYSQL_SERVICE_HOST') .';port=3306;dbname=flagshipphones', 'emina', 'emina123');
 	    $veza->exec("set names utf8");
 	    $news = $veza->query("select naslov, slika, tekst from news where id = ".$id);
 	    if (!$news) {

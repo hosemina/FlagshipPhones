@@ -13,7 +13,7 @@
         header('Location: index.php');
         session_destroy();
     }
-        $veza = mysqli_connect("localhost", "emina", "emina123", "flagshipphones");
+        $veza = mysqli_connect( getenv('MYSQL_SERVICE_HOST'), "emina", "emina123", "flagshipphones");
         if (!$veza) {
             die("Connection failed: " . mysqli_connect_error());
         }
