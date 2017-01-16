@@ -28,6 +28,7 @@ if(isset($_POST['naslovvijesti'],$_FILES['imagespecs'], $_POST['vijesttext'])) {
          {
                 $brojSpecifikacija = $nesto["id"];
          }
+         $brojSpecifikacija += 1;
         /*img upload*/
     
         $target_dir = "uploads/";

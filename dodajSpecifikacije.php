@@ -31,6 +31,7 @@ if(isset($_POST['naslovtekst'],$_FILES['imagespecs'], $_POST['releaseddatetext']
          {
                 $brojSpecifikacija = $nesto["id"];
          }
+         $brojSpecifikacija += 1;
         /*img upload*/
     
         $target_dir = "uploads/";
