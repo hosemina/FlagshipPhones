@@ -73,7 +73,7 @@ include 'header.php';
 	        die("Connection failed: " . mysqli_connect_error());
 	    }
 	    
-	    $news = $veza->query("SELECT * FROM (SELECT * FROM news ORDER BY id ASC LIMIT 3)");
+	    $news = $veza->query("SELECT * FROM (SELECT * FROM news ORDER BY id ASC LIMIT 3) as r");
 	    if (!$news) {
 	          $greska = $veza->errorInfo();
 	          print "SQL greška: " . $greska[2];
