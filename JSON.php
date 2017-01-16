@@ -16,8 +16,8 @@ function rest_get($request, $data) {
 	$br = $upit->rowCount();
 
 	
-		print "{ \"Telefoni\": ";
-		$i = 0;
+		print "{ \"Telefoni\":[ ";
+		$i = 1;
         foreach ($upit->fetchAll() as $phone)
         {
             if($i < $br)
@@ -26,7 +26,7 @@ function rest_get($request, $data) {
                 print '"'.$phone["naslov"] . '"';
             $i++;
         }
- 		print "}";
+ 		print "]}";
 }
 
 function rest_post($request, $data) { }
