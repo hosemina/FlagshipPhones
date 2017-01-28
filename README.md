@@ -158,11 +158,12 @@ a) Napravljena MySQL baza podataka koja se sastoji od sedam tabela. ERD i dump b
 b) Skripta prebaciUBazu.php prebacuje sve podatke iz XML u bazu podataka. Kada se prijavite kao admin (username: admin, password: password), u gornjem desnom uglu stranice se nalazi "Mogucnosti". Klikom na to otvara se stranica namijenjena za admina. Tu se nalazi mogućnost dodavanja fajlova iz XML-a u bazu (koje sam ja već dodala, ali mislim da ima nekih koji nisu tu; u svakom slučaju možete nešto obrisati pa probati).  </br>
 c) Prepravljene sve skripte da podaci čuvaju i kupe iz baze umjesto iz XML-a. </br>
 d) Napravljen hosting webstranice na OpenShift. Napravljen i deployment baze. </br> Link stranice: http://flagshipphones-flagshipphones.44fs.preview.openshiftapps.com/ </br>
+** Nova stranica: http://flagshipphones-flagshipphones2.44fs.preview.openshiftapps.com/ ** </br>
 f) Napravljena metoda REST serivsa koja vraća sve telefone sa određenim id-om proizvođača u JSON formatu. Samo admin ima tu mogućnost koju možemo naći kad se prijavimo kao admin pa onda Mogućnosti i unesemo id proizvođača čije proizvode želimo da dobijemo u JSON formatu.
 </br>
 e) Priloženi screenshot-ovi testiranja servisa iz POSTMAN-a. Vidimo ovdje da navodimo link na servis i idbrand (tj. id proizvođača telefona). Npr.: http://flagshipphones-flagshipphones.44fs.preview.openshiftapps.com/JSON.php?idbrand=3 .  
 </br>
-
+** Nova stranica: http://flagshipphones-flagshipphones2.44fs.preview.openshiftapps.com/ ** </br>
 ####II - <b>Šta nije urađeno? </b>
 </br>
 
